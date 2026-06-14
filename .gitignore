@@ -1,0 +1,11 @@
+# 대용량 바이너리 / 임시
+cloudflared.exe
+cloudflared.log
+server.py
+_*.tmp
+_*.txt
+_*.html
+_*.json
+assets/_scan/
+assets/_raw/
+.DS_Store
