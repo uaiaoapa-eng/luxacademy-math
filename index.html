@@ -14,13 +14,14 @@
 <link rel="icon" type="image/png" href="assets/favicon.png" /><meta property="og:image" content="assets/og-image.jpg" /><meta property="og:site_name" content="럭스아카데미" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="assets/og-image.jpg" />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"럭스아카데미 수학관","url":"https://www.luxacademy.co.kr/","telephone":"+82-507-1394-8038","email":"luxacademy2024@naver.com","image":"assets/og-image.jpg","address":{"@type":"PostalAddress","streetAddress":"서초구 고무래로 10길 26, 6층 602호","addressLocality":"서울","addressRegion":"서초구","addressCountry":"KR"},"sameAs":["https://www.instagram.com/luxacademy_official/","https://blog.naver.com/luxacademy_official"],"description":"강남대성 강사진 · 최대 5명 정원 소수정예 중·고등 수학학원"}</script>
 </head>
-<body>
+<body class="home">
 
 <!-- ===================== COM-01 GNB ===================== -->
 <header class="gnb" id="gnb">
   <div class="wrap gnb__inner">
     <a href="#hero" class="gnb__logo" aria-label="럭스아카데미 메인">
-      <img src="assets/logo-navy.png" class="gnb__logo-img" alt="LUX ACADEMY" />
+      <img src="assets/logo-white.png" class="gnb__logo-img gnb__logo--white" alt="LUX ACADEMY" />
+      <img src="assets/logo-navy.png" class="gnb__logo-img gnb__logo--navy" alt="" aria-hidden="true" />
     </a>
 
     <nav class="gnb__menu" aria-label="주 메뉴">
@@ -42,7 +43,7 @@
       </ul>
     </nav>
 
-    <div class="gnb__contact"><a href="tel:0507-1394-8038" class="gnb__tel">📞 0507-1394-8038</a><a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener" class="gnb__kakao">카톡 상담</a></div><a href="admission.html" class="btn btn--gold btn--sm gnb__cta">입학테스트 신청</a>
+    <div class="gnb__contact"><a href="tel:0507-1394-8038" class="gnb__tel">📞 0507-1394-8038</a><a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener" class="gnb__kakao">카톡 상담</a></div>
 
     <button class="gnb__burger" id="burger" aria-label="메뉴 열기" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -72,28 +73,137 @@
 
 <!-- ===================== MAIN-01 Hero ===================== -->
 <section class="hero" id="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="heroBase" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#071a40"/>
+          <stop offset="0.5" stop-color="#0d2c63"/>
+          <stop offset="1" stop-color="#06122e"/>
+        </linearGradient>
+        <radialGradient id="heroGlow" cx="0.74" cy="0.18" r="0.6">
+          <stop offset="0" stop-color="#2f74d6" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#2f74d6" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="heroGlow2" cx="0.12" cy="0.92" r="0.5">
+          <stop offset="0" stop-color="#3dd9c0" stop-opacity="0.20"/>
+          <stop offset="1" stop-color="#3dd9c0" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="heroLeft" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#06122e" stop-opacity="0.88"/>
+          <stop offset="0.5" stop-color="#06122e" stop-opacity="0.25"/>
+          <stop offset="0.78" stop-color="#06122e" stop-opacity="0"/>
+        </linearGradient>
+        <path id="heroWave" d="M-160,330 C 220,150 470,470 760,310 S 1240,150 1640,330" fill="none"/>
+        <path id="heroWave2" d="M-160,210 C 260,360 520,40 820,230 S 1300,400 1680,210" fill="none"/>
+        <pattern id="heroGrid" width="44" height="44" patternUnits="userSpaceOnUse">
+          <path d="M44 0 H0 V44" fill="none" stroke="#6cb8f2" stroke-width="1"/>
+        </pattern>
+      </defs>
+
+      <rect width="1440" height="640" fill="url(#heroBase)"/>
+      <rect width="1440" height="640" fill="url(#heroGrid)" opacity="0.06"/>
+      <rect width="1440" height="640" fill="url(#heroGlow)"/>
+      <rect width="1440" height="640" fill="url(#heroGlow2)"/>
+
+      <g stroke="#6cb8f2" stroke-width="1">
+        <use href="#heroWave" opacity="0.05" transform="translate(0,-90)"/>
+        <use href="#heroWave" opacity="0.07" transform="translate(0,-66)"/>
+        <use href="#heroWave" opacity="0.10" transform="translate(0,-44)"/>
+        <use href="#heroWave" opacity="0.13" transform="translate(0,-24)"/>
+        <use href="#heroWave" opacity="0.16" transform="translate(0,-8)"/>
+        <use href="#heroWave" opacity="0.20" transform="translate(0,4)"/>
+        <use href="#heroWave" opacity="0.16" transform="translate(0,16)"/>
+        <use href="#heroWave" opacity="0.12" transform="translate(0,30)"/>
+        <use href="#heroWave" opacity="0.08" transform="translate(0,46)"/>
+        <use href="#heroWave" opacity="0.05" transform="translate(0,64)"/>
+      </g>
+      <g stroke="#3dd9c0" stroke-width="1">
+        <use href="#heroWave2" opacity="0.05" transform="translate(0,150)"/>
+        <use href="#heroWave2" opacity="0.07" transform="translate(0,170)"/>
+        <use href="#heroWave2" opacity="0.09" transform="translate(0,188)"/>
+        <use href="#heroWave2" opacity="0.07" transform="translate(0,206)"/>
+        <use href="#heroWave2" opacity="0.05" transform="translate(0,224)"/>
+      </g>
+
+      <g class="ff ff-slow" stroke="#7cc6ff" fill="none" opacity="0.5" transform="translate(1120,440)">
+        <line x1="-110" y1="0" x2="120" y2="0" stroke-width="1.5"/>
+        <line x1="0" y1="105" x2="0" y2="-115" stroke-width="1.5"/>
+        <path d="M112 -6 L122 0 L112 6" stroke-width="1.5"/>
+        <path d="M-6 -107 L0 -117 L6 -107" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="80" stroke-width="1.5"/>
+        <line x1="0" y1="0" x2="62" y2="-50" stroke-width="1.5"/>
+        <line x1="62" y1="-50" x2="62" y2="0" stroke-width="1.2" opacity="0.7"/>
+        <circle cx="62" cy="-50" r="3.5" fill="#9ad4ff" stroke="none"/>
+        <text x="68" y="-56" fill="#bcdcff" stroke="none" font-size="20" font-family="Georgia,serif" font-style="italic">P</text>
+        <text x="-18" y="20" fill="#bcdcff" stroke="none" font-size="18" font-family="Georgia,serif" font-style="italic">O</text>
+        <text x="56" y="22" fill="#bcdcff" stroke="none" font-size="18" font-family="Georgia,serif" font-style="italic">M</text>
+        <text x="126" y="6" fill="#bcdcff" stroke="none" font-size="18" font-family="Georgia,serif" font-style="italic">x</text>
+        <text x="6" y="-118" fill="#bcdcff" stroke="none" font-size="18" font-family="Georgia,serif" font-style="italic">y</text>
+      </g>
+      <g class="ff ff-med" stroke="#9ad4ff" fill="none" opacity="0.55" transform="translate(1230,70)">
+        <path d="M0 90 L120 90 L120 0 Z" stroke-width="1.6"/>
+        <path d="M108 90 L108 78 L120 78" stroke-width="1.2"/>
+        <text x="128" y="50" fill="#bcdcff" stroke="none" font-size="22" font-family="Georgia,serif" font-style="italic">b</text>
+        <text x="52" y="110" fill="#bcdcff" stroke="none" font-size="22" font-family="Georgia,serif" font-style="italic">a</text>
+      </g>
+      <g class="ff ff-fast" stroke="#5aa9f0" fill="none" opacity="0.45" transform="translate(980,300)">
+        <path d="M0 0 C 18 -34, 42 -34, 60 0 S 102 34, 120 0 S 162 -34, 180 0" stroke-width="1.6"/>
+        <line x1="0" y1="0" x2="190" y2="0" stroke-width="1" opacity="0.5" stroke-dasharray="3 4"/>
+      </g>
+
+      <g stroke="#7cc6ff" stroke-width="1" opacity="0.45">
+        <line x1="1180" y1="150" x2="1290" y2="120"/>
+        <line x1="1290" y1="120" x2="1360" y2="200"/>
+        <line x1="1180" y1="150" x2="1230" y2="235"/>
+        <line x1="1230" y1="235" x2="1360" y2="200"/>
+      </g>
+      <g fill="#9ad4ff">
+        <circle cx="1180" cy="150" r="3.5"/>
+        <circle cx="1290" cy="120" r="2.5"/>
+        <circle cx="1360" cy="200" r="3"/>
+        <circle cx="1230" cy="235" r="4"/>
+      </g>
+
+      <g fill="#cfe6ff" font-family="Georgia,'Times New Roman',serif" font-style="italic">
+        <text class="ff ff-slow"  x="980"  y="120" font-size="30" opacity="0.30">x = (−b ± √(b² − 4ac)) / 2a</text>
+        <text class="ff ff-fast"  x="1000" y="520" font-size="26" opacity="0.26">sin²θ + cos²θ = 1</text>
+        <text class="ff ff-med"   x="1180" y="380" font-size="28" opacity="0.24">∫ f(x) dx</text>
+        <text class="ff ff-slow"  x="860"  y="470" font-size="24" opacity="0.20">dy/dx</text>
+        <text class="ff ff-fast"  x="1280" y="300" font-size="40" opacity="0.18">π r²</text>
+        <text class="ff ff-med"   x="1330" y="560" font-size="30" opacity="0.20">Σ n²</text>
+        <text class="ff ff-slow"  x="900"  y="200" font-size="22" opacity="0.16">lim x→0</text>
+        <text class="ff ff-med"   x="120"  y="560" font-size="26" opacity="0.10">a² + b² = c²</text>
+        <text class="ff ff-fast"  x="60"   y="150" font-size="22" opacity="0.09">f(x) = ax² + bx + c</text>
+      </g>
+
+      <g>
+        <circle cx="520" cy="120" r="4" fill="#7cc6ff" opacity="0.9"/>
+        <circle cx="940" cy="430" r="5" fill="#3dd9c0" opacity="0.8"/>
+        <circle cx="1070" cy="540" r="3.5" fill="#9ad4ff" opacity="0.7"/>
+        <circle cx="700" cy="560" r="2.5" fill="#3dd9c0" opacity="0.6"/>
+        <circle cx="1410" cy="330" r="3" fill="#9ad4ff" opacity="0.7"/>
+      </g>
+
+      <g fill="none" stroke="#5aa9f0">
+        <circle cx="560" cy="560" r="20" stroke-width="2" opacity="0.28"/>
+        <circle cx="1395" cy="470" r="13" stroke-width="2" opacity="0.40"/>
+      </g>
+
+      <rect width="1440" height="640" fill="url(#heroLeft)"/>
+    </svg>
+  </div>
+
   <div class="wrap">
-    <div class="hero__grid">
-      <div class="hero__copy">
-        <p class="hero__eyebrow">고등 가서 후회하지 않으려면</p>
-        <h1>중·고등 수학,<br /><span class="em">성적은 관리에서 갈립니다</span></h1>
-        <p class="hero__sub">강남대성 강사진의 수업을 최대 5명 정원으로 — 의대·SKY 입시와 내신 상승 사례로 증명합니다</p>
-        <div class="hero__cta">
-          <a href="admission.html" class="btn btn--gold">입학테스트 신청</a>
-          <a href="#results" class="btn btn--outline">입시·내신 실적 보기</a>
-        </div>
-        <a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener" class="hero__soft">또는 카카오톡으로 1:1 간편 상담 →</a>
-        <div class="hero__trust">
-          <span>강남대성 공식 콘텐츠 연계</span>
-          <span class="dot">·</span>
-          <span>최대 5명 정원</span>
-          <span class="dot">·</span>
-          <span>반포 서래마을 인근</span>
-        </div>
+    <div class="hero__copy">
+      <p class="hero__eyebrow">우리 아이 수학 성적, 어디서부터 잡아야 할까요?</p>
+      <h1><span class="hl">중·고등 수학,</span><br /><span class="line2">아이마다 필요한 관리가 다릅니다.</span></h1>
+      <p class="hero__sub">강남 대성 강사진의 진단형 수업과 1:1 학습관리로 무너진 개념, 부족한 문제풀이, 내신 전략까지 <strong>‘최대 5명 소수 정원’</strong>으로 체계적으로 잡습니다.</p>
+      <div class="hero__cta">
+        <a href="admission.html" class="btn btn--gold">입학테스트 신청</a>
+        <a href="#results" class="btn btn--outline">입시·내신 실적 보기</a>
       </div>
-      <div class="hero__visual">
-        <img src="assets/hero-classroom.jpg" alt="럭스아카데미 강의실" />
-      </div>
+      <a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener" class="hero__soft">또는 카카오톡으로 1:1 간편 상담 →</a>
     </div>
   </div>
 </section>
@@ -115,10 +225,9 @@
 
     <div class="record-band reveal">
       <a href="#results">
-        <div class="eye">2026학년도 핵심 실적</div>
+        <div class="eye">🏆 2026학년도 핵심 실적</div>
         <p class="line">서울대 의예 1명 · 연/고대 의예 4명 · 의예과 다수 · SKY 다수 <span class="note">(※출강생 포함)</span></p>
         <p class="line" style="margin-top:6px;">서일중 중간고사 만점 · 전교 10등 이내 다수 · 고1 5등급 → 고2 전교 1등</p>
-        <p class="more">전체 실적 보기 →</p>
       </a>
     </div>
   </div>
@@ -135,9 +244,27 @@
     <div class="grade-grid">
       <a class="grade reveal" href="middle.html">
         <span class="grade__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v13"/><path d="M3.5 5.2A1.7 1.7 0 0 1 5 4.3h3.5a3.5 3.5 0 0 1 3.5 3 3.5 3.5 0 0 1 3.5-3H19a1.7 1.7 0 0 1 1.5.9"/><path d="M3.5 5.2V18a1.5 1.5 0 0 0 1.5 1.5h5M20.5 5.2V18a1.5 1.5 0 0 1-1.5 1.5h-5"/></svg>
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bkCover" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc0ff"/><stop offset="1" stop-color="#2f7fe0"/></linearGradient>
+              <linearGradient id="bkPage" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dbe7f6"/></linearGradient>
+              <linearGradient id="bulbG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe680"/><stop offset="1" stop-color="#f4b01c"/></linearGradient>
+            </defs>
+            <ellipse cx="32" cy="56" rx="23" ry="4" fill="#1a2436" opacity="0.12"/>
+            <path d="M32 28 L7 32 L7 50 L32 47 Z" fill="url(#bkCover)"/>
+            <path d="M32 28 L57 32 L57 50 L32 47 Z" fill="#2c76d6"/>
+            <path d="M32 24 L10 28 L10 46 L32 43 Z" fill="url(#bkPage)"/>
+            <path d="M32 24 L54 28 L54 46 L32 43 Z" fill="#eef4fb"/>
+            <g stroke="#a6bcd9" stroke-width="1.5" stroke-linecap="round">
+              <line x1="14" y1="32" x2="27" y2="30.2"/><line x1="14" y1="36" x2="27" y2="34.2"/><line x1="14" y1="40" x2="27" y2="38.2"/>
+              <line x1="37" y1="30.2" x2="50" y2="32"/><line x1="37" y1="34.2" x2="50" y2="36"/><line x1="37" y1="38.2" x2="50" y2="40"/>
+            </g>
+            <circle cx="32" cy="16" r="9.5" fill="url(#bulbG)"/>
+            <ellipse cx="29" cy="13" rx="2.8" ry="4" fill="#fff" opacity="0.55"/>
+            <rect x="28.3" y="24" width="7.4" height="3.6" rx="1.2" fill="#cfd8e3"/>
+            <rect x="29.4" y="27.2" width="5.2" height="2.4" rx="1" fill="#aebaca"/>
+          </svg>
         </span>
-        <span class="grade__tag">중1~중3</span>
         <span class="grade__range">중등 선행·내신</span>
         <p class="grade__quote">“고등 수학을 버틸 실력과 습관을 지금 만듭니다”</p>
         <ul class="grade__points">
@@ -150,9 +277,21 @@
 
       <a class="grade reveal" href="high.html">
         <span class="grade__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M9 3.5V6h6V3.5"/><path d="M8.5 13l2.2 2.2L15 11"/></svg>
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="capBase" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4a66"/><stop offset="1" stop-color="#1b2740"/></linearGradient>
+              <linearGradient id="capTop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c83ab"/><stop offset="1" stop-color="#33456b"/></linearGradient>
+            </defs>
+            <ellipse cx="32" cy="53" rx="22" ry="4" fill="#1a2436" opacity="0.12"/>
+            <path d="M16 30 C20 35 26 37 32 37 C38 37 44 35 48 30 L48 40 C48 45 41 48 32 48 C23 48 16 45 16 40 Z" fill="url(#capBase)"/>
+            <path d="M32 17 L59 28 L32 39 L5 28 Z" fill="url(#capTop)"/>
+            <path d="M32 17 L59 28 L32 39 Z" fill="#41557c"/>
+            <ellipse cx="22" cy="25" rx="4" ry="1.6" fill="#fff" opacity="0.28"/>
+            <circle cx="32" cy="28" r="2.6" fill="#ffd24d"/>
+            <path d="M32 28 L49 31 L49 43" fill="none" stroke="#ffd24d" stroke-width="2"/>
+            <circle cx="49" cy="45" r="3" fill="#f4b01c"/>
+          </svg>
         </span>
-        <span class="grade__tag">고1~고2</span>
         <span class="grade__range">고1·2 내신</span>
         <p class="grade__quote">“학교 기출 기반, 등급을 바꾸는 내신 설계”</p>
         <ul class="grade__points">
@@ -165,9 +304,21 @@
 
       <a class="grade reveal" href="sat.html">
         <span class="grade__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="0.9" fill="currentColor"/></svg>
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="trCup" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe680"/><stop offset="1" stop-color="#eea21a"/></linearGradient>
+            </defs>
+            <ellipse cx="32" cy="56" rx="18" ry="3.6" fill="#1a2436" opacity="0.12"/>
+            <path d="M20 21 C9 21 9 33 22 34" fill="none" stroke="#eea21a" stroke-width="3.4" stroke-linecap="round"/>
+            <path d="M44 21 C55 21 55 33 42 34" fill="none" stroke="#eea21a" stroke-width="3.4" stroke-linecap="round"/>
+            <path d="M19 13 L45 13 L43 27 C43 35 38 40 32 40 C26 40 21 35 21 27 Z" fill="url(#trCup)"/>
+            <ellipse cx="27" cy="20" rx="2.4" ry="5.5" fill="#fff" opacity="0.5"/>
+            <rect x="30" y="40" width="4" height="6" fill="#cf8b1e"/>
+            <rect x="23.5" y="46" width="17" height="4" rx="1.6" fill="#e3a52e"/>
+            <rect x="21.5" y="50" width="21" height="4.2" rx="1.8" fill="#c5841d"/>
+            <path d="M32 19 l1.7 3.5 3.9.5 -2.9 2.6 .8 3.8 -3.5-2 -3.5 2 .8-3.8 -2.9-2.6 3.9-.5 z" fill="#fff" opacity="0.9"/>
+          </svg>
         </span>
-        <span class="grade__tag">고3·N수</span>
         <span class="grade__range">고3·N수 수능</span>
         <p class="grade__quote">“남은 기간, 점수 올리는 순서가 다릅니다”</p>
         <ul class="grade__points">
@@ -197,27 +348,24 @@
           <tr><th>비교 항목</th><th>일반 대형 학원</th><th class="lux">럭스아카데미</th></tr>
         </thead>
         <tbody>
-          <tr><td>한 반 인원</td><td class="general">수십 명 단위</td><td class="lux"><span class="chk">✓</span>최대 5명</td></tr>
-          <tr><td>풀이 점검</td><td class="general">개별 확인 어려움</td><td class="lux"><span class="chk">✓</span>매 수업 학생별 점검</td></tr>
-          <tr><td>시간 편성</td><td class="general">고정 시간표</td><td class="lux"><span class="chk">✓</span>상담 후 개별 편성</td></tr>
-          <tr><td>과제 · 오답</td><td class="general">일괄 과제</td><td class="lux"><span class="chk">✓</span>약점 기반 개별 설계</td></tr>
-          <tr><td>학부모 상담</td><td class="general">데스크 응대</td><td class="lux"><span class="chk">✓</span>담당 강사 직접</td></tr>
+          <tr><td>한 반 인원</td><td class="general">수십 명 단위</td><td class="lux"><span class="chk">👥</span>최대 5명</td></tr>
+          <tr><td>풀이 점검</td><td class="general">개별 확인 어려움</td><td class="lux"><span class="chk">🔍</span>매 수업 학생별 점검</td></tr>
+          <tr><td>시간 편성</td><td class="general">고정 시간표</td><td class="lux"><span class="chk">🗓️</span>상담 후 개별 편성</td></tr>
+          <tr><td>과제 · 오답</td><td class="general">일괄 과제</td><td class="lux"><span class="chk">📝</span>약점 기반 개별 설계</td></tr>
+          <tr><td>학부모 상담</td><td class="general">데스크 응대</td><td class="lux"><span class="chk">💬</span>담당 강사 직접</td></tr>
         </tbody>
       </table>
     </div>
 
     <!-- 모바일 카드 -->
     <div class="compare-cards reveal">
-      <div class="cmp-card"><div class="h">한 반 인원</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">수십 명 단위</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">최대 5명</span></div></div>
-      <div class="cmp-card"><div class="h">풀이 점검</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">개별 확인 어려움</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">매 수업 학생별 점검</span></div></div>
-      <div class="cmp-card"><div class="h">시간 편성</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">고정 시간표</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">상담 후 개별 편성</span></div></div>
-      <div class="cmp-card"><div class="h">과제 · 오답</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">일괄 과제</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">약점 기반 개별 설계</span></div></div>
-      <div class="cmp-card"><div class="h">학부모 상담</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">데스크 응대</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">담당 강사 직접</span></div></div>
+      <div class="cmp-card"><div class="h">한 반 인원</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">수십 명 단위</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">👥 최대 5명</span></div></div>
+      <div class="cmp-card"><div class="h">풀이 점검</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">개별 확인 어려움</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">🔍 매 수업 학생별 점검</span></div></div>
+      <div class="cmp-card"><div class="h">시간 편성</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">고정 시간표</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">🗓️ 상담 후 개별 편성</span></div></div>
+      <div class="cmp-card"><div class="h">과제 · 오답</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">일괄 과제</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">📝 약점 기반 개별 설계</span></div></div>
+      <div class="cmp-card"><div class="h">학부모 상담</div><div class="row"><span class="k">일반 대형 학원</span><span class="v">데스크 응대</span></div><div class="row lux"><span class="k">럭스아카데미</span><span class="v">💬 담당 강사 직접</span></div></div>
     </div>
 
-    <div class="compare-cta reveal">
-      <a href="admission.html">이 차이를 직접 확인해 보세요 — 입학테스트 신청 →</a>
-    </div>
   </div>
 </section>
 
@@ -229,16 +377,40 @@
       <h2 class="sec-title">수업이 아니라, 시스템이 성적을 만듭니다</h2>
     </div>
 
-    <div class="cycle reveal">
-      <div class="step confirmed"><div class="no">1</div><div class="name">진단</div><div class="desc">입학테스트로 수준 · 약점 · 습관 분석</div></div>
-      <div class="step confirmed"><div class="no">2</div><div class="name">반 배정</div><div class="desc">레벨·목표 기준 최대 5명</div></div>
-      <div class="step confirmed"><div class="no">3</div><div class="name">수업</div><div class="desc">강남대성 연계 교재</div></div>
-      <div class="step pending"><div class="no">4</div><div class="name">과제</div><div class="desc">상세 안내 준비 중</div></div>
-      <div class="step pending"><div class="no">5</div><div class="name">테스트</div><div class="desc">상세 안내 준비 중</div></div>
-      <div class="step pending"><div class="no">6</div><div class="name">피드백</div><div class="desc">상세 안내 준비 중</div></div>
-      <div class="step pending"><div class="no">7</div><div class="name">상담</div><div class="desc">상세 안내 준비 중</div></div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+      <linearGradient id="sysBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7ce5ff"/><stop offset="1" stop-color="#2f7fe0"/></linearGradient>
+    </defs></svg>
+
+    <div class="cycle-wrap reveal">
+      <div class="cycle">
+        <div class="step confirmed">
+          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="17" height="23" rx="2.4" fill="#fff" stroke="#1c1c22" stroke-width="2.2"/><line x1="10" y1="10" x2="19" y2="10" stroke="#1c1c22" stroke-width="2"/><line x1="10" y1="14" x2="17" y2="14" stroke="#1c1c22" stroke-width="2"/><circle cx="25" cy="25" r="7.5" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2.2"/><line x1="30.5" y1="30.5" x2="35" y2="35" stroke="#1c1c22" stroke-width="2.8"/></svg></span>
+          <div class="step__head"><span class="no">1</span><span class="name">진단</span></div>
+          <div class="desc">수준·약점·습관 분석</div>
+        </div>
+        <div class="step confirmed">
+          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="15" r="4.5" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2"/><path d="M19 31 c0-5 3.5-8 8-8 s8 3 8 8" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2"/><circle cx="15" cy="14" r="5" fill="#fff" stroke="#1c1c22" stroke-width="2.2"/><path d="M6 31 c0-6 4-9 9-9 s9 3 9 9" fill="#fff" stroke="#1c1c22" stroke-width="2.2"/></svg></span>
+          <div class="step__head"><span class="no">2</span><span class="name">반 배정</span></div>
+          <div class="desc">레벨·목표 기준 최대 5명</div>
+        </div>
+        <div class="step confirmed">
+          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="7" width="30" height="20" rx="2.5" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2.2"/><path d="M10 20 l5-5 4 3 6-7" fill="none" stroke="#fff" stroke-width="2.4"/><line x1="20" y1="27" x2="20" y2="31" stroke="#1c1c22" stroke-width="2.4"/><line x1="14" y1="32" x2="26" y2="32" stroke="#1c1c22" stroke-width="2.4"/></svg></span>
+          <div class="step__head"><span class="no">3</span><span class="name">수업</span></div>
+          <div class="desc">강남대성 연계 실전 수업</div>
+        </div>
+        <div class="step confirmed">
+          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="6" width="19" height="27" rx="2.4" fill="#fff" stroke="#1c1c22" stroke-width="2.2"/><rect x="12" y="3.5" width="9" height="5" rx="1.5" fill="#fff" stroke="#1c1c22" stroke-width="2"/><circle cx="27" cy="27" r="7.5" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2"/><path d="M23.5 27 l2.5 2.5 4 -4.5" fill="none" stroke="#fff" stroke-width="2.2"/></svg></span>
+          <div class="step__head"><span class="no">4</span><span class="name">과제·테스트</span></div>
+          <div class="desc">이해도 확인 및 약점 추적</div>
+        </div>
+        <div class="step confirmed">
+          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M6 7 h28 a2 2 0 0 1 2 2 v14 a2 2 0 0 1 -2 2 H16 l-6 6 v-6 H6 a2 2 0 0 1 -2 -2 V9 a2 2 0 0 1 2 -2 z" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2.2"/><line x1="13" y1="20" x2="13" y2="15" stroke="#fff" stroke-width="2.6"/><line x1="20" y1="20" x2="20" y2="12" stroke="#fff" stroke-width="2.6"/><line x1="27" y1="20" x2="27" y2="17" stroke="#fff" stroke-width="2.6"/></svg></span>
+          <div class="step__head"><span class="no">5</span><span class="name">피드백</span></div>
+          <div class="desc">보완 방향·학습 전략 제시</div>
+        </div>
+      </div>
     </div>
-    <p class="cycle-loop reveal">7단계가 <span class="ico">↻</span> 순환하며 한 학생의 성적을 끌어올립니다</p>
+    <p class="cycle-loop reveal">5단계가 순환하며 한 학생의 성적을 끌어올립니다</p>
   </div>
 </section>
 
@@ -296,7 +468,6 @@
         </div>
       </a>
     </div>
-    <p class="foot-note" style="text-align:center;margin-top:24px;">※ 일부 실적은 강사 출강 지도 실적 포함 · 재원생 실적은 별도 표기</p>
   </div>
 </section>
 
@@ -365,66 +536,23 @@
       <div class="story reveal"><div class="before"><div class="ba">BEFORE</div><div class="v">동덕여고 40점대</div></div><div class="sep">↓</div><div class="after"><div class="ba">AFTER</div><div class="v">70점대</div></div></div>
     </div>
 
-    <div class="reviews-head reveal" id="reviews">
-      <h3>학부모·학생 후기</h3>
-      <a href="https://blog.naver.com/luxacademy_official" target="_blank" rel="noopener">더보기 →</a>
-    </div>
-    <div class="reviews-cta reveal">
-      <p>실제 학부모·학생 후기는 네이버 블로그와 인스타그램에서 확인하실 수 있습니다.</p>
-      <div class="links">
-        <a href="https://blog.naver.com/luxacademy_official" target="_blank" rel="noopener" class="btn btn--gold btn--sm">네이버 블로그 후기</a>
-        <a href="https://www.instagram.com/luxacademy_official/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">인스타그램</a>
-      </div>
-    </div>
-    <p class="foot-note" style="text-align:center;margin-top:18px;color:var(--paper-mute)">후기 게시 시 개인정보 보호를 위해 학교·학년 이니셜로 표기합니다. (후기 영역 연동 예정)</p>
   </div>
-</section>
 
-<!-- ===================== MAIN-09 입학 절차 + 폼 ===================== -->
-<section class="sec sec--navy-deep" id="apply">
-  <div class="wrap">
-    <div class="apply-grid">
-      <div class="reveal">
-        <span class="sec-eyebrow">Admission</span>
-        <h2 class="sec-title" style="text-align:left;margin-bottom:8px;">입학 절차</h2>
-        <p class="apply-note" style="margin-top:0;margin-bottom:26px;">테스트만 응시해도 진단 상담을 제공합니다.</p>
-        <div class="steps">
-          <div class="pstep"><div class="no">1</div><div class="tx"><b>테스트 신청</b><span>온라인으로 간편 신청</span></div></div>
-          <div class="pstep"><div class="no">2</div><div class="tx"><b>테스트 응시</b><span>현재 수준·약점 진단</span></div></div>
-          <div class="pstep"><div class="no">3</div><div class="tx"><b>진단 상담</b><span>결과 기반 1:1 상담</span></div></div>
-          <div class="pstep"><div class="no">4</div><div class="tx"><b>반·시간 편성</b><span>학교 일정에 맞춰 편성</span></div></div>
-        </div>
-        <p class="apply-quote">“지금 필요한 것은 더 많은 문제집이 아니라, 아이에게 맞는 수학 로드맵입니다.”</p>
+  <div class="review-band" id="reviews">
+    <div class="review-band__inner">
+      <div class="review-band__text">
+        <h3>학부모·학생 후기</h3>
+        <p>실제 학부모·학생 후기는 네이버 블로그와 인스타그램에서 확인하실 수 있습니다.</p>
       </div>
-
-      <div class="form-card reveal">
-        <form id="applyForm" novalidate>
-          <h3>입학테스트 신청</h3>
-          <p class="fc-sub">아래 정보를 남겨주시면 1영업일 내 연락드립니다.</p>
-          <div class="field-row">
-            <div class="field"><label>학생 이름 <span class="req">*</span></label><input type="text" name="name" required placeholder="홍길동" /></div>
-            <div class="field"><label>학교 · 학년 <span class="req">*</span></label><input type="text" name="school" required placeholder="○○중 2학년" /></div>
-          </div>
-          <div class="field"><label>학부모 연락처 <span class="req">*</span></label><input type="tel" name="phone" required placeholder="010-0000-0000" inputmode="numeric" /></div>
-          <div class="field">
-            <label>희망 과정 <span class="req">*</span></label>
-            <select name="course" required>
-              <option value="" disabled selected>선택해주세요</option>
-              <option value="middle">중등 (선행·내신)</option>
-              <option value="high">고등 내신</option>
-              <option value="sat">수능 수학</option>
-            </select>
-          </div>
-          <label class="agree"><input type="checkbox" name="agree" required /><span>개인정보 수집·이용에 동의합니다 (필수) <a href="legal.html#consent" target="_blank" rel="noopener">전문 보기</a></span></label>
-          <button type="submit" class="btn btn--gold btn--block">입학테스트 신청</button>
-        </form>
-
-        <div class="form-done" id="formDone">
-          <div class="ic">✓</div>
-          <b>신청이 접수되었습니다</b>
-          <p>1영업일 내 연락드립니다.<br />빠른 상담을 원하시면 카카오채널로 문의해 주세요.</p>
-          <div class="kakao"><a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener" class="kakao-btn">카카오채널 문의</a></div>
-        </div>
+      <div class="review-band__links">
+        <a href="https://blog.naver.com/luxacademy_official" target="_blank" rel="noopener" class="rbtn rbtn--naver">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 4h5.3l5.4 8V4H20v16h-5.3l-5.4-8v8H4z" fill="#fff"/></svg>
+          네이버 블로그 후기 보기
+        </a>
+        <a href="https://www.instagram.com/luxacademy_official/" target="_blank" rel="noopener" class="rbtn rbtn--insta">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.4" fill="#fff"/></svg>
+          인스타그램 보기
+        </a>
       </div>
     </div>
   </div>

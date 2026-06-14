@@ -44,7 +44,55 @@
 <main>
 
 <!-- SUB-ADM-01 헤더 -->
-<section class="subhero">
+<section class="subhero subhero--pastel">
+  <div class="subhero__bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 340" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="shBase" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffe6ec"/>
+          <stop offset="0.45" stop-color="#dfeefb"/>
+          <stop offset="1" stop-color="#ece1f7"/>
+        </linearGradient>
+        <radialGradient id="shBlue" cx="0.5" cy="0.5" r="0.6"><stop offset="0" stop-color="#cfe6fb" stop-opacity="0.9"/><stop offset="1" stop-color="#cfe6fb" stop-opacity="0"/></radialGradient>
+        <radialGradient id="shPink" cx="0.86" cy="0.78" r="0.55"><stop offset="0" stop-color="#f9d2e4" stop-opacity="0.85"/><stop offset="1" stop-color="#f9d2e4" stop-opacity="0"/></radialGradient>
+        <radialGradient id="shPeach" cx="0.05" cy="0.1" r="0.5"><stop offset="0" stop-color="#ffded2" stop-opacity="0.8"/><stop offset="1" stop-color="#ffded2" stop-opacity="0"/></radialGradient>
+        <linearGradient id="shCubePink" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.82"/>
+          <stop offset="0.55" stop-color="#fcd3e5" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#f3a6cb" stop-opacity="0.5"/>
+        </linearGradient>
+        <linearGradient id="shCubeBlue" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+          <stop offset="0.55" stop-color="#d2e8fc" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#a9caf5" stop-opacity="0.5"/>
+        </linearGradient>
+        <linearGradient id="shLeft" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"/>
+          <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="340" fill="url(#shBase)"/>
+      <rect width="1440" height="340" fill="url(#shPeach)"/>
+      <rect width="1440" height="340" fill="url(#shBlue)"/>
+      <rect width="1440" height="340" fill="url(#shPink)"/>
+      <g fill="#7f8db0" opacity="0.22" font-family="Georgia,'Times New Roman',serif" font-style="italic">
+        <text x="1338" y="70" font-size="40">&#8734;</text>
+        <text x="1392" y="130" font-size="26">&#960;</text>
+        <text x="1300" y="285" font-size="34">&#8730;</text>
+        <text x="1418" y="220" font-size="24">&#931;</text>
+      </g>
+      <ellipse cx="1085" cy="312" rx="140" ry="18" fill="#9a7bc0" opacity="0.12"/>
+      <g transform="translate(1075,180) rotate(13)">
+        <rect x="-86" y="-86" width="172" height="172" rx="32" fill="url(#shCubePink)" stroke="#ffffff" stroke-opacity="0.65" stroke-width="2"/>
+        <rect x="-68" y="-70" width="66" height="34" rx="16" fill="#ffffff" opacity="0.35"/>
+      </g>
+      <g transform="translate(1290,110) rotate(-10)">
+        <rect x="-64" y="-64" width="128" height="128" rx="26" fill="url(#shCubeBlue)" stroke="#ffffff" stroke-opacity="0.7" stroke-width="2"/>
+        <rect x="-50" y="-52" width="50" height="26" rx="12" fill="#ffffff" opacity="0.4"/>
+      </g>
+      <rect width="1440" height="340" fill="url(#shLeft)"/>
+    </svg>
+  </div>
   <div class="wrap">
     <p class="subhero__crumb"><a href="index.html">홈</a> › 입학 안내</p>
     <div class="subhero__grid">
@@ -80,12 +128,10 @@
 <!-- 신청 폼 (#apply) -->
 <section class="sec sec--navy-deep" id="apply">
   <div class="wrap">
-    <div class="apply-grid">
-      <div class="reveal">
+    <div style="max-width:560px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:30px;">
         <span class="sec-eyebrow">Apply</span>
-        <h2 class="sec-title" style="text-align:left;">지금, 진단부터 시작하세요</h2>
-        <p class="apply-quote">“지금 필요한 것은 더 많은 문제집이 아니라, 아이에게 맞는 수학 로드맵입니다.”</p>
-        <p class="apply-note">테스트만 응시해도 결과 기반 진단 상담을 제공합니다. 등록 압박 없이 현재 위치를 확인해 보세요.</p>
+        <h2 class="sec-title">지금, 진단부터 시작하세요</h2>
       </div>
       <div class="form-card reveal">
         <form id="applyForm" novalidate>

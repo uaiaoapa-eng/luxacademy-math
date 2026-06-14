@@ -130,13 +130,9 @@
     ).observe(applySec);
   }
 
-  /* ---------- 스크롤 시 GNB 배경 강화 ---------- */
+  /* ---------- 스크롤 시 GNB 전환 (투명↔흰 배경) ---------- */
   const gnb = $("#gnb");
-  const onScroll = () => {
-    const scrolled = window.scrollY > 40;
-    gnb.style.background = scrolled ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.82)";
-    gnb.style.boxShadow = scrolled ? "0 6px 24px rgba(23,34,57,0.06)" : "none";
-  };
+  const onScroll = () => gnb.classList.toggle("gnb--solid", window.scrollY > 40);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 })();
