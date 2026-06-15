@@ -56,29 +56,37 @@
 
   /* ---------- 입학테스트 신청 폼 (MAIN-09 / SUB-ADM-01) ---------- */
   const form = $("#applyForm");
-  // 폼 수신 이메일 (실 사이트 고객센터 기준). 운영 시 아임웹 폼/알림톡으로 교체 권장.
-  const FORM_EMAIL = "luxacademy2025@naver.com";
+  // Web3Forms — 제출 시 luxacademy2025@naver.com 으로 자동 전송 (메일앱 불필요)
+  const WEB3FORMS_KEY = "b41f1a5e-420d-46c3-b94b-279a3c443914";
   if (form) {
-    form.addEventListener("submit", (e) => {
+    const submitBtn = form.querySelector('[type="submit"]');
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (!form.reportValidity()) return;
-      const f = new FormData(form);
-      const name = (f.get("name") || "").toString().trim();
-      const subject = `[입학테스트 신청] ${name} 학생`;
-      const body = [
-        `학생 이름: ${f.get("name") || ""}`,
-        `학교·학년: ${f.get("school") || ""}`,
-        `학부모 연락처: ${f.get("phone") || ""}`,
-        `희망 과정: ${f.get("course") || ""}`,
-        "",
-        "(럭스아카데미 홈페이지 입학테스트 신청)",
-      ].join("\n");
-      // 실제 수신 이메일로 메일 작성 (사용자 메일앱에서 발송)
-      window.location.href =
-        `mailto:${FORM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      form.style.display = "none";
-      const done = $("#formDone");
-      if (done) done.classList.add("show");
+      const raw = new FormData(form);
+      const studentName = (raw.get("name") || "").toString().trim();
+      const data = new FormData();
+      data.append("access_key", WEB3FORMS_KEY);
+      data.append("from_name", "럭스아카데미 홈페이지");
+      data.append("subject", `[입학테스트 신청] ${studentName} 학생`);
+      data.append("학생 이름", raw.get("name") || "");
+      data.append("학교·학년", raw.get("school") || "");
+      data.append("학부모 연락처", raw.get("phone") || "");
+      data.append("희망 과정", raw.get("course") || "");
+
+      const origText = submitBtn ? submitBtn.textContent : "";
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "전송 중…"; }
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || !out.success) throw new Error(out.message || "전송 실패");
+        form.style.display = "none";
+        const done = $("#formDone");
+        if (done) done.classList.add("show");
+      } catch (err) {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = origText; }
+        alert("죄송합니다. 신청 전송에 실패했습니다.\n잠시 후 다시 시도하시거나 전화·카카오톡으로 문의해 주세요.");
+      }
     });
   }
 
