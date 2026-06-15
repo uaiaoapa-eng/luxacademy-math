@@ -568,10 +568,14 @@ body.home .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
     linear-gradient(180deg, #ffffff 0%, #f3f6fb 100%);
   border-bottom: 1px solid var(--paper-line);
 }
-/* admission 전용 파스텔/유리큐브 배너 */
-.subhero--pastel { position: relative; overflow: hidden; isolation: isolate; background: #eaf0fb; border-bottom: none; }
-.subhero--pastel .subhero__bg { position: absolute; inset: 0; z-index: -1; }
-.subhero--pastel .subhero__bg svg { width: 100%; height: 100%; display: block; }
+/* admission 전용 파스텔/유리큐브 배너 (이미지 배경) */
+.subhero--pastel {
+  position: relative; overflow: hidden; isolation: isolate; border-bottom: none;
+  background:
+    linear-gradient(90deg, rgba(233,239,251,0.78) 0%, rgba(233,239,251,0.15) 42%, rgba(233,239,251,0) 62%),
+    url("assets/admission-hero.jpg") right center / cover no-repeat,
+    #dfeafb;
+}
 .subhero--pastel .wrap { position: relative; z-index: 1; }
 .subhero__crumb { font-size: 13px; color: var(--paper-mute); margin-bottom: 16px; }
 .subhero__crumb a { color: var(--paper-mute); }
