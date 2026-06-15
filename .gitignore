@@ -10,3 +10,5 @@ assets/_raw/
 .DS_Store
 
 .claude/settings.local.json
+
+_deploy/
