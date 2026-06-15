@@ -57,7 +57,7 @@
   /* ---------- 입학테스트 신청 폼 (MAIN-09 / SUB-ADM-01) ---------- */
   const form = $("#applyForm");
   // 폼 수신 이메일 (실 사이트 고객센터 기준). 운영 시 아임웹 폼/알림톡으로 교체 권장.
-  const FORM_EMAIL = "luxacademy2024@naver.com";
+  const FORM_EMAIL = "luxacademy2025@naver.com";
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
