@@ -375,6 +375,34 @@ body.home .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
 .tab-panel { display: none; max-width: 820px; margin: 0 auto; }
 .tab-panel.active { display: block; animation: fadeIn 0.4s var(--ease); }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+/* 코딩관 부트캠프 톤 그라데이션 히어로 */
+.kdt-hero {
+  position: relative; overflow: hidden; isolation: isolate; color: #fff; text-align: center;
+  padding: calc(var(--gnb-h) + 70px) 0 70px;
+  background: linear-gradient(135deg, #1733b8 0%, #3a5cf0 46%, #7b3ff2 100%);
+}
+.kdt-hero__bg {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(900px 520px at 82% 8%, rgba(255, 255, 255, 0.20), transparent 60%),
+    radial-gradient(760px 520px at 8% 96%, rgba(120, 200, 255, 0.28), transparent 60%);
+}
+.kdt-hero__inner { position: relative; z-index: 1; max-width: 900px; }
+.kdt-hero__badge {
+  display: inline-block; font-size: 14px; font-weight: 700; color: #fff;
+  background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.38);
+  padding: 8px 16px; border-radius: 999px;
+}
+.kdt-hero__title { margin-top: 22px; font-size: clamp(30px, 5vw, 50px); font-weight: 800; line-height: 1.26; letter-spacing: -0.025em; }
+.kdt-hero__title b { color: #ffd34d; }
+.kdt-hero__sub { margin-top: 18px; font-size: clamp(16px, 1.9vw, 19px); color: rgba(255, 255, 255, 0.9); line-height: 1.7; }
+.kdt-hero__cta { margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.kdt-hero .btn--outline { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
+.kdt-hero .btn--outline:hover { border-color: #fff; background: rgba(255, 255, 255, 0.10); }
+.kdt-hero__partners { margin-top: 40px; display: flex; gap: 12px 26px; justify-content: center; flex-wrap: wrap; }
+.kdt-hero__partners span { font-size: 15px; font-weight: 700; color: rgba(255, 255, 255, 0.82); letter-spacing: 0.01em; }
+@media (max-width: 768px) { .kdt-hero { padding: calc(var(--gnb-h) + 44px) 0 48px; } }
+
 /* 공고 빈 상태 */
 .empty-state { text-align: center; padding: clamp(48px, 9vw, 96px) 0; }
 .empty-state__icon { display: inline-flex; }
