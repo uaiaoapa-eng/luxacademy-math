@@ -401,6 +401,7 @@ body.home .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
 .kdt-hero .btn--outline:hover { border-color: #fff; background: rgba(255, 255, 255, 0.10); }
 .kdt-hero__partners { margin-top: 40px; display: flex; gap: 12px 26px; justify-content: center; flex-wrap: wrap; }
 .kdt-hero__partners span { font-size: 15px; font-weight: 700; color: rgba(255, 255, 255, 0.82); letter-spacing: 0.01em; }
+.kdt-hero__partners img { height: 26px; width: auto; object-fit: contain; opacity: 0.9; }
 @media (max-width: 768px) { .kdt-hero { padding: calc(var(--gnb-h) + 44px) 0 48px; } }
 
 /* 공고 빈 상태 */
