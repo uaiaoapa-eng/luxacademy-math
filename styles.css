@@ -388,6 +388,34 @@ body.home .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
 .gallery-item:hover img { transform: scale(1.05); }
 @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
 
+/* 실적 탭 — 화려한 카드 */
+.rgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.rcard {
+  position: relative; overflow: hidden; background: #fff;
+  border: 1px solid var(--paper-line); border-radius: 16px; padding: 28px 22px 24px;
+  box-shadow: var(--card); transition: transform 0.22s var(--ease), box-shadow 0.22s;
+}
+.rcard:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.rcard::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--sky), var(--gold-ink)); }
+.rcard__yr { display: inline-block; font-size: 12.5px; font-weight: 800; letter-spacing: 0.02em; color: var(--gold-ink); background: var(--gold-soft); border: 1px solid var(--gold-line); padding: 4px 12px; border-radius: 999px; }
+.rcard__yr--green { color: var(--green); background: rgba(47, 158, 106, 0.10); border-color: rgba(47, 158, 106, 0.35); }
+.rcard__big { margin-top: 16px; font-size: clamp(19px, 2.2vw, 24px); font-weight: 800; line-height: 1.34; color: var(--paper-ink); letter-spacing: -0.01em; }
+.rcard__big b { color: var(--gold-ink); }
+.rcard__sub { margin-top: 10px; font-size: 14px; color: var(--paper-mute); }
+.rcard__sub small { font-size: 12.5px; }
+.upcard {
+  position: relative; overflow: hidden; border-radius: 16px; padding: 32px 22px; text-align: center;
+  background: linear-gradient(160deg, #ffffff 0%, #eaf7f0 100%);
+  border: 1px solid rgba(47, 158, 106, 0.30); box-shadow: var(--card);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  transition: transform 0.22s var(--ease), box-shadow 0.22s;
+}
+.upcard:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.upcard__before { font-size: 15px; color: var(--paper-mute); }
+.upcard__arrow { font-size: 32px; font-weight: 900; color: var(--green); line-height: 1; filter: drop-shadow(0 2px 6px rgba(47,158,106,0.35)); }
+.upcard__after { font-size: clamp(20px, 2.5vw, 27px); font-weight: 800; color: var(--green); letter-spacing: -0.01em; }
+@media (max-width: 768px) { .rgrid { grid-template-columns: 1fr; } }
+
 .result-list { display: grid; gap: 12px; }
 .result-list li {
   display: flex; gap: 14px; align-items: flex-start; padding: 16px 20px;
