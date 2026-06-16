@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>공고 | 럭스아카데미</title>
+<meta name="description" content="럭스아카데미 공고 게시판 — 모집·일정·안내 공지." />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/png" href="assets/favicon.png" /><meta property="og:image" content="assets/og-image.jpg" /><meta property="og:site_name" content="럭스아카데미" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="assets/og-image.jpg" />
+</head>
+<body>
+
+<header class="gnb" id="gnb">
+  <div class="wrap gnb__inner">
+    <a href="index.html" class="gnb__logo"><img src="assets/logo-navy.png" class="gnb__logo-img" alt="LUX ACADEMY" /></a>
+    <nav class="gnb__menu" aria-label="주 메뉴"><ul style="display:flex;align-items:center;gap:4px;">
+      <li><a href="index.html#numbers">학원 소개</a></li>
+      <li class="has-drop"><span>수학관 <i class="caret"></i></span><div class="gnb__drop">
+        <a href="middle.html">중등 수학</a><a href="high.html">고등 내신</a><a href="sat.html">수능 수학</a></div></li>
+      <li><a href="robot.html">AI·로봇관</a></li><li><a href="index.html#reviews">후기</a></li><li><a href="notice.html">공고</a></li>
+    </ul></nav>
+    <div class="gnb__contact"><a href="tel:0507-1394-8038" class="gnb__tel">📞 0507-1394-8038</a><a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener" class="gnb__kakao">카톡 상담</a></div>
+    <a href="admission.html" class="btn btn--gold btn--sm gnb__cta">입학테스트 신청</a>
+    <button class="gnb__burger" id="burger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mo-menu" id="moMenu">
+  <a href="index.html#numbers">학원 소개</a>
+  <div class="acc" id="moAcc"><button>수학관 <i class="caret"></i></button><div class="acc__body"><a href="middle.html">중등 수학</a><a href="high.html">고등 내신</a><a href="sat.html">수능 수학</a></div></div>
+  <a href="robot.html">AI·로봇관</a><a href="index.html#reviews">후기</a><a href="notice.html">공고</a>
+  <a href="admission.html" class="btn btn--gold btn--block mo-cta">입학테스트 신청</a>
+</div>
+
+<main>
+
+<!-- 헤더 -->
+<section class="subhero" style="padding-top:56px;">
+  <div class="wrap">
+    <p class="subhero__crumb"><a href="index.html">홈</a> › 공고</p>
+    <div class="subhero__grid">
+      <div>
+        <h1>공고</h1>
+        <p class="subhero__sub">모집 · 일정 · 안내 공지를 올려드립니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 공고 목록 (빈 상태) -->
+<section class="sec sec--light">
+  <div class="wrap" style="max-width:820px;">
+    <div class="empty-state reveal">
+      <span class="empty-state__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="10" width="40" height="48" rx="5" fill="#eef2f8" stroke="#c4cedd" stroke-width="2"/>
+          <line x1="20" y1="23" x2="44" y2="23" stroke="#c4cedd" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="20" y1="32" x2="44" y2="32" stroke="#d5dce8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="20" y1="41" x2="36" y2="41" stroke="#d5dce8" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <p class="empty-state__text">등록된 게시물이 없습니다.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer"><div class="wrap">
+  <div class="footer__top"><a href="index.html" class="footer__brand"><img src="assets/logo-navy.png" class="footer__logo-img" alt="LUX ACADEMY" /> <span style="font-weight:700;font-size:15px;">수학관 · 로봇관</span></a><div class="footer__sns"><a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener">카카오</a><a href="https://www.instagram.com/luxacademy_official/" target="_blank" rel="noopener">인스타</a></div></div>
+  <div class="footer__biz">(주)럭스아카데미 · 대표 홍동선 · 서초구 고무래로 10길 26, 6층 602호<br />02-592-1236 · 사업자 308-81-475-72<span class="sep">|</span><a href="legal.html#terms">이용약관</a><span class="sep">·</span><a href="legal.html#privacy">개인정보처리방침</a></div>
+</div></footer>
+
+<div class="mo-bar" id="moBar"><a href="admission.html" class="btn btn--gold">입학테스트 신청</a><a href="tel:0507-1394-8038" class="btn btn--outline btn--tel" aria-label="전화">📞</a></div>
+<div class="float-cta"><a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener" class="float-btn float-kakao" aria-label="카카오톡 상담"><span class="ic">💬</span>카톡 상담</a><a href="tel:0507-1394-8038" class="float-btn float-tel" aria-label="전화 상담"><span class="ic">📞</span>전화 상담</a></div>
+<script src="script.js"></script>
+</body>
+</html>
