@@ -402,6 +402,12 @@ body.home .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
 .kdt-hero__partners { margin-top: 40px; display: flex; gap: 12px 26px; justify-content: center; flex-wrap: wrap; }
 .kdt-hero__partners span { font-size: 15px; font-weight: 700; color: rgba(255, 255, 255, 0.82); letter-spacing: 0.01em; }
 .kdt-hero__partners img { height: 26px; width: auto; object-fit: contain; opacity: 0.9; }
+
+/* 아이콘 타일 — 민트~하늘~남색 */
+.vicon { display: inline-grid; place-items: center; width: 58px; height: 58px; border-radius: 16px; background: linear-gradient(140deg, #34d8c4 0%, #38bdf8 52%, #2057c2 100%); box-shadow: 0 6px 16px rgba(32, 87, 194, 0.22); margin-bottom: 16px; }
+.vicon svg { width: 30px; height: 30px; }
+.tc .vicon { margin: 0 auto 14px; }
+.tc .k { font-size: 13px !important; font-weight: 800; letter-spacing: 0.1em; color: var(--sky); }
 @media (max-width: 768px) { .kdt-hero { padding: calc(var(--gnb-h) + 44px) 0 48px; } }
 
 /* 공고 빈 상태 */
