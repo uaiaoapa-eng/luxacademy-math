@@ -1,0 +1,36 @@
+name: Deploy to Cloudflare Pages
+
+# main 브랜치에 push될 때마다 Cloudflare Pages로 자동 배포
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site files
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_site' \
+            --exclude='node_modules' \
+            --exclude='server.py' \
+            --exclude='cloudflared*' \
+            --exclude='CNAME' \
+            --exclude='*.md' \
+            --exclude='.gitignore' \
+            ./ _site/
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 1bc3ebf3e88a3bd65c5a95e64c261e13
+          command: pages deploy _site --project-name=luxacademy-math --branch=main
