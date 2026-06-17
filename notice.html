@@ -3,11 +3,74 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>공고 | 럭스아카데미</title>
+<title>공고 · 게시판 | 럭스아카데미</title>
 <meta name="description" content="럭스아카데미 공고 게시판 — 모집·일정·안내 공지." />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" type="image/png" href="assets/favicon.png" /><meta property="og:image" content="assets/og-image.jpg" /><meta property="og:site_name" content="럭스아카데미" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="assets/og-image.jpg" />
+<style>
+/* ===== 게시판 (이 페이지 전용) ===== */
+.board { max-width: 880px; margin: 0 auto; }
+.board__toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.board__tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.board__tab { padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 700; color: var(--paper-mute); background: var(--paper-soft); border: 1px solid transparent; cursor: pointer; transition: 0.15s; }
+.board__tab.active { background: var(--gold); color: #fff; }
+.board__tab:not(.active):hover { color: var(--paper-ink); }
+.board__search { display: flex; }
+.board__search input { height: 42px; padding: 0 14px; border: 1.5px solid var(--paper-line); border-right: 0; border-radius: 9px 0 0 9px; font-size: 14px; width: 190px; background: #fff; color: var(--paper-ink); }
+.board__search input:focus { outline: none; border-color: var(--gold); }
+.board__search button { height: 42px; padding: 0 16px; border: 0; background: var(--gold); color: #fff; border-radius: 0 9px 9px 0; font-weight: 700; cursor: pointer; }
+
+.board__count { font-size: 13px; color: var(--paper-mute); margin-bottom: 6px; }
+.board__count b { color: var(--gold-ink); }
+.board__list { border-top: 2px solid var(--paper-ink); }
+.board__row { display: flex; align-items: center; gap: 14px; padding: 18px 10px; border-bottom: 1px solid var(--paper-line); cursor: pointer; transition: background 0.15s; text-align: left; width: 100%; background: none; }
+.board__row:hover { background: var(--paper-soft); }
+.board__row.pinned { background: rgba(43, 138, 239, 0.05); }
+.board__cat { flex: 0 0 auto; font-size: 12px; font-weight: 800; color: var(--gold-ink); background: var(--gold-soft); border: 1px solid var(--gold-line); padding: 4px 10px; border-radius: 6px; white-space: nowrap; }
+.board__row.pinned .board__cat { background: var(--gold); color: #fff; border-color: var(--gold); }
+.board__title { flex: 1; min-width: 0; font-size: 16px; font-weight: 600; color: var(--paper-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.board__pin { margin-right: 4px; }
+.board__new { display: inline-block; margin-left: 7px; font-size: 11px; font-weight: 900; color: #e5484d; vertical-align: 1px; }
+.board__date { flex: 0 0 auto; font-size: 13.5px; color: var(--paper-mute); font-variant-numeric: tabular-nums; }
+.board__empty { text-align: center; padding: 64px 0; color: var(--paper-mute); }
+
+.board__pager { display: flex; justify-content: center; gap: 6px; margin-top: 30px; }
+.board__pager button { min-width: 38px; height: 38px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--paper-line); background: #fff; font-weight: 700; color: var(--paper-mute); cursor: pointer; }
+.board__pager button.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+.board__pager button:disabled { opacity: 0.4; cursor: default; }
+
+/* 상세 */
+.post__head { padding-bottom: 22px; border-bottom: 2px solid var(--paper-ink); margin-bottom: 28px; }
+.post__cat { display: inline-block; font-size: 12px; font-weight: 800; color: var(--gold-ink); background: var(--gold-soft); border: 1px solid var(--gold-line); padding: 4px 10px; border-radius: 6px; }
+.post__title { font-size: clamp(22px, 3.2vw, 30px); font-weight: 800; line-height: 1.34; margin: 14px 0 12px; letter-spacing: -0.02em; }
+.post__meta { font-size: 13.5px; color: var(--paper-mute); display: flex; gap: 16px; }
+.post__body { font-size: 16px; line-height: 1.85; color: var(--paper-ink); min-height: 100px; }
+.post__body p { margin-bottom: 16px; }
+.post__body ul { margin: 10px 0 16px; padding-left: 4px; }
+.post__body li { position: relative; padding-left: 18px; margin-bottom: 7px; }
+.post__body li::before { content: ""; position: absolute; left: 3px; top: 11px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+.post__body img { max-width: 100%; border-radius: 12px; margin: 8px 0; border: 1px solid var(--paper-line); }
+.post__body strong { color: var(--gold-ink); }
+.post__nav { margin-top: 40px; border-top: 1px solid var(--paper-line); }
+.post__nav button { display: flex; align-items: center; gap: 16px; width: 100%; padding: 16px 4px; border-bottom: 1px solid var(--paper-line); font-size: 14.5px; color: var(--paper-mute); cursor: pointer; background: none; text-align: left; }
+.post__nav button:hover .pn-title { color: var(--gold-ink); }
+.post__nav .pn-dir { font-weight: 800; color: var(--paper-ink); min-width: 56px; flex: 0 0 auto; }
+.post__nav .pn-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.post__nav button:disabled { opacity: 0.45; cursor: default; }
+.post__nav button:disabled:hover .pn-title { color: var(--paper-mute); }
+.post__back { display: flex; justify-content: center; margin-top: 30px; }
+
+@media (max-width: 600px) {
+  .board__toolbar { flex-direction: column; align-items: stretch; }
+  .board__search { width: 100%; }
+  .board__search input { flex: 1; width: auto; }
+  .board__row { gap: 10px; padding: 15px 6px; }
+  .board__cat { font-size: 11px; padding: 3px 7px; }
+  .board__title { font-size: 14.5px; }
+  .board__date { font-size: 12px; }
+}
+</style>
 </head>
 <body>
 
@@ -40,26 +103,16 @@
     <div class="subhero__grid">
       <div>
         <h1>공고</h1>
-        <p class="subhero__sub">모집 · 일정 · 안내 공지를 올려드립니다.</p>
+        <p class="subhero__sub">모집 · 일정 · 안내 공지를 확인하세요.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 공고 목록 (빈 상태) -->
-<section class="sec sec--light">
-  <div class="wrap" style="max-width:820px;">
-    <div class="empty-state reveal">
-      <span class="empty-state__icon" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="12" y="10" width="40" height="48" rx="5" fill="#eef2f8" stroke="#c4cedd" stroke-width="2"/>
-          <line x1="20" y1="23" x2="44" y2="23" stroke="#c4cedd" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="20" y1="32" x2="44" y2="32" stroke="#d5dce8" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="20" y1="41" x2="36" y2="41" stroke="#d5dce8" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </span>
-      <p class="empty-state__text">등록된 게시물이 없습니다.</p>
-    </div>
+<!-- 게시판 -->
+<section class="sec sec--light" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="board" id="board"></div>
   </div>
 </section>
 
@@ -72,6 +125,199 @@
 
 <div class="mo-bar" id="moBar"><a href="admission.html" class="btn btn--gold">입학테스트 신청</a><a href="tel:0507-1394-8038" class="btn btn--outline btn--tel" aria-label="전화">📞</a></div>
 <div class="float-cta"><a href="https://open.kakao.com/o/g3AH0qzi" target="_blank" rel="noopener" class="float-btn float-kakao" aria-label="카카오톡 상담"><span class="ic">💬</span>카톡 상담</a><a href="tel:0507-1394-8038" class="float-btn float-tel" aria-label="전화 상담"><span class="ic">📞</span>전화 상담</a></div>
+
 <script src="script.js"></script>
+
+<!-- ============================================================
+     게시판 데이터 + 동작
+     ▶ 새 글 올리기: 아래 POSTS 배열 맨 위에 { } 하나 추가하면 끝.
+       id 는 안 겹치게 가장 큰 번호 +1, date 는 "YYYY-MM-DD",
+       category 는 "모집/일정/안내" 중 하나, pinned:true 면 상단 고정(공지).
+       body 는 HTML — 문단은 <p>...</p>, 목록은 <ul><li>...</li></ul>.
+     ▶ 수정 후 git push 하면 사이트에 자동 반영됩니다.
+     ============================================================ -->
+<script>
+(function () {
+  "use strict";
+
+  // ===================== 게시물 데이터 =====================
+  const POSTS = [
+    {
+      id: 5, category: "모집", pinned: true, date: "2026-06-15",
+      title: "2026 국제로봇대회(ROBOFEST·WRO) 대비반 모집",
+      body: `
+        <p>럭스아카데미 AI·로봇관에서 <strong>2026 국제로봇대회 대비반</strong>을 모집합니다.</p>
+        <ul>
+          <li>모집 대상: 초등 1학년 ~ 고등 3학년 (개인·팀 단위 모두 지원)</li>
+          <li>개강: 9월 (주 2회 · 회당 3시간)</li>
+          <li>과정: Python · 아두이노 · AI · 3D 프린팅 + 대회 준비(보고서·영어 발표)</li>
+          <li>방식: 강남/서초 내원 또는 온라인 병행</li>
+        </ul>
+        <p>자세한 내용은 <strong>AI·로봇관</strong> 페이지에서 확인하시고, 상담 신청 또는 카카오톡으로 문의해 주세요.</p>
+      `
+    },
+    {
+      id: 4, category: "안내", pinned: false, date: "2026-06-10",
+      title: "입학테스트 상시 접수 안내",
+      body: `
+        <p>입학테스트는 <strong>상시 접수</strong>하고 있습니다. 신청 후 일정을 개별 안내드립니다.</p>
+        <ul>
+          <li>현재 수준 · 약점 단원 · 풀이 습관을 진단합니다.</li>
+          <li>테스트만 응시해도 결과 기반 진단 상담을 제공합니다.</li>
+        </ul>
+        <p>홈페이지 상단의 <strong>입학테스트 신청</strong> 버튼으로 접수하실 수 있습니다.</p>
+      `
+    },
+    {
+      id: 3, category: "일정", pinned: false, date: "2026-06-01",
+      title: "여름 특강 일정 안내",
+      body: `
+        <p>여름 방학 특강 일정은 <strong>상담 시 개별 안내</strong>드립니다.</p>
+        <p>학생의 학교 일정과 수준에 맞춰 반을 편성하므로, 먼저 진단 상담을 받아보시길 권해드립니다.</p>
+      `
+    },
+    {
+      id: 2, category: "안내", pinned: false, date: "2026-05-20",
+      title: "수학관 반 편성 · 정원 안내",
+      body: `
+        <p>모든 수업은 <strong>최대 5명 정원</strong>으로 운영됩니다.</p>
+        <ul>
+          <li>레벨 · 목표 기준으로 반을 편성합니다.</li>
+          <li>고정 시간표가 아닌, 진단 상담 후 개별 편성합니다.</li>
+        </ul>
+      `
+    },
+    {
+      id: 1, category: "안내", pinned: false, date: "2026-05-02",
+      title: "럭스아카데미 홈페이지 오픈 안내",
+      body: `
+        <p>럭스아카데미 수학관·로봇관 홈페이지를 새롭게 오픈했습니다.</p>
+        <p>모집·일정·안내 공지를 이 게시판에 올려드릴 예정입니다. 많은 관심 부탁드립니다.</p>
+      `
+    },
+  ];
+  // ========================================================
+
+  const CATEGORIES = ["전체", "모집", "일정", "안내"];
+  const PER_PAGE = 10;
+  const board = document.getElementById("board");
+  let state = { cat: "전체", q: "", page: 1 };
+
+  const fmt = (d) => d.replace(/-/g, ".");
+  const isNew = (dateStr) => {
+    const diff = (Date.now() - new Date(dateStr + "T00:00:00").getTime()) / 86400000;
+    return diff >= 0 && diff <= 14;
+  };
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  function filtered() {
+    const q = state.q.trim().toLowerCase();
+    return POSTS
+      .filter((p) => state.cat === "전체" || p.category === state.cat)
+      .filter((p) => !q || p.title.toLowerCase().includes(q))
+      .sort((a, b) => (b.pinned - a.pinned) || (b.date < a.date ? -1 : 1));
+  }
+
+  function renderList() {
+    const all = filtered();
+    const pinned = all.filter((p) => p.pinned);
+    const normal = all.filter((p) => !p.pinned);
+    const pages = Math.max(1, Math.ceil(normal.length / PER_PAGE));
+    if (state.page > pages) state.page = pages;
+    const start = (state.page - 1) * PER_PAGE;
+    const pageItems = normal.slice(start, start + PER_PAGE);
+    const rows = state.page === 1 ? pinned.concat(pageItems) : pageItems;
+
+    const tabs = CATEGORIES.map((c) =>
+      `<button class="board__tab ${c === state.cat ? "active" : ""}" data-cat="${c}">${c}</button>`).join("");
+
+    let listHtml;
+    if (rows.length === 0) {
+      listHtml = `<div class="board__empty">${state.q ? `'${esc(state.q)}' 검색 결과가 없습니다.` : "등록된 게시물이 없습니다."}</div>`;
+    } else {
+      listHtml = rows.map((p) => `
+        <button class="board__row ${p.pinned ? "pinned" : ""}" data-id="${p.id}">
+          <span class="board__cat">${p.pinned ? "📌 공지" : p.category}</span>
+          <span class="board__title">${esc(p.title)}${isNew(p.date) ? '<span class="board__new">N</span>' : ""}</span>
+          <span class="board__date">${fmt(p.date)}</span>
+        </button>`).join("");
+    }
+
+    let pager = "";
+    if (pages > 1) {
+      let btns = `<button data-page="${state.page - 1}" ${state.page === 1 ? "disabled" : ""}>‹</button>`;
+      for (let i = 1; i <= pages; i++)
+        btns += `<button class="${i === state.page ? "active" : ""}" data-page="${i}">${i}</button>`;
+      btns += `<button data-page="${state.page + 1}" ${state.page === pages ? "disabled" : ""}>›</button>`;
+      pager = `<div class="board__pager">${btns}</div>`;
+    }
+
+    board.innerHTML = `
+      <div class="board__toolbar">
+        <div class="board__tabs">${tabs}</div>
+        <div class="board__search">
+          <input id="boardQ" type="search" placeholder="제목 검색" value="${esc(state.q)}" />
+          <button id="boardSearchBtn" aria-label="검색">검색</button>
+        </div>
+      </div>
+      <p class="board__count">전체 <b>${all.length}</b>건</p>
+      <div class="board__list">${listHtml}</div>
+      ${pager}`;
+
+    // 이벤트
+    board.querySelectorAll(".board__tab").forEach((b) =>
+      b.addEventListener("click", () => { state.cat = b.dataset.cat; state.page = 1; renderList(); }));
+    board.querySelectorAll(".board__row").forEach((b) =>
+      b.addEventListener("click", () => { location.hash = "post-" + b.dataset.id; }));
+    board.querySelectorAll(".board__pager button").forEach((b) =>
+      b.addEventListener("click", () => { if (!b.disabled) { state.page = +b.dataset.page; renderList(); window.scrollTo({ top: 0, behavior: "smooth" }); } }));
+    const qInput = document.getElementById("boardQ");
+    const doSearch = () => { state.q = qInput.value; state.page = 1; renderList(); };
+    document.getElementById("boardSearchBtn").addEventListener("click", doSearch);
+    qInput.addEventListener("keydown", (e) => { if (e.key === "Enter") doSearch(); });
+  }
+
+  function renderDetail(id) {
+    const idx = POSTS.findIndex((p) => p.id === id);
+    if (idx === -1) { location.hash = ""; return; }
+    const p = POSTS[idx];
+    // 이전/다음 (날짜순 — 목록과 동일 정렬 기준, 고정글 제외한 일반 흐름)
+    const ordered = POSTS.slice().sort((a, b) => (b.date < a.date ? -1 : 1));
+    const oi = ordered.findIndex((x) => x.id === id);
+    const prev = ordered[oi - 1]; // 더 최신
+    const next = ordered[oi + 1]; // 더 이전
+
+    board.innerHTML = `
+      <article class="post">
+        <div class="post__head">
+          <span class="post__cat">${p.pinned ? "📌 공지" : p.category}</span>
+          <h2 class="post__title">${esc(p.title)}</h2>
+          <div class="post__meta"><span>작성일 ${fmt(p.date)}</span><span>럭스아카데미</span></div>
+        </div>
+        <div class="post__body">${p.body}</div>
+        <div class="post__nav">
+          <button data-id="${prev ? prev.id : ""}" ${prev ? "" : "disabled"}>
+            <span class="pn-dir">이전 글</span><span class="pn-title">${prev ? esc(prev.title) : "이전 글이 없습니다"}</span></button>
+          <button data-id="${next ? next.id : ""}" ${next ? "" : "disabled"}>
+            <span class="pn-dir">다음 글</span><span class="pn-title">${next ? esc(next.title) : "다음 글이 없습니다"}</span></button>
+        </div>
+        <div class="post__back"><a href="#" class="btn btn--ghost">목록으로</a></div>
+      </article>`;
+
+    board.querySelectorAll(".post__nav button").forEach((b) =>
+      b.addEventListener("click", () => { if (!b.disabled) location.hash = "post-" + b.dataset.id; }));
+    board.querySelector(".post__back a").addEventListener("click", (e) => { e.preventDefault(); location.hash = ""; });
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
+
+  function route() {
+    const m = location.hash.match(/^#post-(\d+)$/);
+    if (m) renderDetail(+m[1]);
+    else renderList();
+  }
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
 </body>
 </html>
