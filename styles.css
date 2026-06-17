@@ -242,10 +242,9 @@ body.home .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
 }
 .stat .num .u { font-size: 0.5em; font-weight: 700; margin-left: 2px; }
 .stat .label { margin-top: 10px; font-size: 15px; color: var(--paper-mute); }
-.stat__laurel { width: 26px; height: 62px; color: #c4c6cc; flex: 0 0 auto; pointer-events: none; }
-.stat__laurel svg { width: 100%; height: 100%; display: block; }
-.stat__laurel--r { transform: scaleX(-1); }
-body.home .stat { flex-direction: row; gap: 6px; }
+.stat__laurel { width: 30px; height: 66px; flex: 0 0 auto; pointer-events: none; }
+.stat__laurel img { width: 100%; height: 100%; object-fit: contain; display: block; }
+body.home .stat { flex-direction: row; gap: 10px; }
 .stat__body { display: flex; flex-direction: column; align-items: center; }
 @media (max-width: 768px) { .stat__laurel { display: none; } }
 
