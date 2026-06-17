@@ -498,36 +498,45 @@
     </div>
 
     <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-      <linearGradient id="sysBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7ce5ff"/><stop offset="1" stop-color="#2f7fe0"/></linearGradient>
+      <linearGradient id="scG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8db8ff"/><stop offset="1" stop-color="#2f6fe0"/></linearGradient>
+      <linearGradient id="scL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d3e3ff"/><stop offset="1" stop-color="#84acf2"/></linearGradient>
     </defs></svg>
 
-    <div class="cycle-wrap reveal">
-      <div class="cycle">
-        <div class="step confirmed">
-          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="17" height="23" rx="2.4" fill="#fff" stroke="#1c1c22" stroke-width="2.2"/><line x1="10" y1="10" x2="19" y2="10" stroke="#1c1c22" stroke-width="2"/><line x1="10" y1="14" x2="17" y2="14" stroke="#1c1c22" stroke-width="2"/><circle cx="25" cy="25" r="7.5" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2.2"/><line x1="30.5" y1="30.5" x2="35" y2="35" stroke="#1c1c22" stroke-width="2.8"/></svg></span>
-          <div class="step__head"><span class="no">1</span><span class="name">진단</span></div>
-          <div class="desc">수준·약점·습관 분석</div>
-        </div>
-        <div class="step confirmed">
-          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="15" r="4.5" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2"/><path d="M19 31 c0-5 3.5-8 8-8 s8 3 8 8" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2"/><circle cx="15" cy="14" r="5" fill="#fff" stroke="#1c1c22" stroke-width="2.2"/><path d="M6 31 c0-6 4-9 9-9 s9 3 9 9" fill="#fff" stroke="#1c1c22" stroke-width="2.2"/></svg></span>
-          <div class="step__head"><span class="no">2</span><span class="name">반 배정</span></div>
-          <div class="desc">레벨·목표 기준 소수정원</div>
-        </div>
-        <div class="step confirmed">
-          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="7" width="30" height="20" rx="2.5" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2.2"/><path d="M10 20 l5-5 4 3 6-7" fill="none" stroke="#fff" stroke-width="2.4"/><line x1="20" y1="27" x2="20" y2="31" stroke="#1c1c22" stroke-width="2.4"/><line x1="14" y1="32" x2="26" y2="32" stroke="#1c1c22" stroke-width="2.4"/></svg></span>
-          <div class="step__head"><span class="no">3</span><span class="name">수업</span></div>
-          <div class="desc">강남대성 연계 실전 수업</div>
-        </div>
-        <div class="step confirmed">
-          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="6" width="19" height="27" rx="2.4" fill="#fff" stroke="#1c1c22" stroke-width="2.2"/><rect x="12" y="3.5" width="9" height="5" rx="1.5" fill="#fff" stroke="#1c1c22" stroke-width="2"/><circle cx="27" cy="27" r="7.5" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2"/><path d="M23.5 27 l2.5 2.5 4 -4.5" fill="none" stroke="#fff" stroke-width="2.2"/></svg></span>
-          <div class="step__head"><span class="no">4</span><span class="name">과제·테스트</span></div>
-          <div class="desc">이해도 확인 및 약점 추적</div>
-        </div>
-        <div class="step confirmed">
-          <span class="step__icon"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M6 7 h28 a2 2 0 0 1 2 2 v14 a2 2 0 0 1 -2 2 H16 l-6 6 v-6 H6 a2 2 0 0 1 -2 -2 V9 a2 2 0 0 1 2 -2 z" fill="url(#sysBlue)" stroke="#1c1c22" stroke-width="2.2"/><line x1="13" y1="20" x2="13" y2="15" stroke="#fff" stroke-width="2.6"/><line x1="20" y1="20" x2="20" y2="12" stroke="#fff" stroke-width="2.6"/><line x1="27" y1="20" x2="27" y2="17" stroke="#fff" stroke-width="2.6"/></svg></span>
-          <div class="step__head"><span class="no">5</span><span class="name">피드백</span></div>
-          <div class="desc">보완 방향·학습 전략 제시</div>
-        </div>
+    <div class="stepc-grid stepc-grid--5 reveal">
+      <div class="stepc">
+        <span class="stepc__badge">STEP.01</span>
+        <span class="stepc__icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="27" r="14" fill="none" stroke="url(#scG)" stroke-width="7"/><line x1="37" y1="37" x2="52" y2="52" stroke="url(#scL)" stroke-width="7" stroke-linecap="round"/></svg></span>
+        <div class="stepc__title">진단</div>
+        <div class="stepc__sub">수준·약점·습관 분석</div>
+        <ul class="stepc__list"><li>1:1 레벨 진단 테스트</li><li>취약 단원·실수 유형 분석</li></ul>
+      </div>
+      <div class="stepc">
+        <span class="stepc__badge">STEP.02</span>
+        <span class="stepc__icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="23" r="9" fill="url(#scG)"/><path d="M8 52 c0-9 7-15 16-15 s16 6 16 15Z" fill="url(#scG)"/><circle cx="45" cy="26" r="7" fill="url(#scL)"/><path d="M34 50 c0-8 5-13 11-13 s11 5 11 13Z" fill="url(#scL)"/></svg></span>
+        <div class="stepc__title">반 배정</div>
+        <div class="stepc__sub">레벨·목표 기준 소수정원</div>
+        <ul class="stepc__list"><li>목표·수준별 소수정예 편성</li><li>강남대성 강사 매칭</li></ul>
+      </div>
+      <div class="stepc">
+        <span class="stepc__badge">STEP.03</span>
+        <span class="stepc__icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 18 C26 13 16 13 10 15 V46 C16 44 26 44 32 49 Z" fill="url(#scG)"/><path d="M32 18 C38 13 48 13 54 15 V46 C48 44 38 44 32 49 Z" fill="url(#scL)"/></svg></span>
+        <div class="stepc__title">수업</div>
+        <div class="stepc__sub">강남대성 연계 실전 수업</div>
+        <ul class="stepc__list"><li>강남대성 공식 콘텐츠 연계</li><li>개념·실전 문제 병행</li></ul>
+      </div>
+      <div class="stepc">
+        <span class="stepc__badge">STEP.04</span>
+        <span class="stepc__icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="12" width="32" height="40" rx="5" fill="url(#scG)"/><rect x="25" y="9" width="14" height="8" rx="3" fill="url(#scL)"/><path d="M23 33 l6 6 12 -13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="stepc__title">과제·테스트</div>
+        <div class="stepc__sub">이해도 확인 및 약점 추적</div>
+        <ul class="stepc__list"><li>수업별 과제·확인 테스트</li><li>약점 데이터 누적 관리</li></ul>
+      </div>
+      <div class="stepc">
+        <span class="stepc__badge">STEP.05</span>
+        <span class="stepc__icon"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M12 16 h26 a5 5 0 0 1 5 5 v12 a5 5 0 0 1 -5 5 H24 l-8 7 v-7 h-4 a5 5 0 0 1 -5 -5 V21 a5 5 0 0 1 5 -5Z" fill="url(#scG)"/><path d="M40 28 h12 a4 4 0 0 1 4 4 v9 a4 4 0 0 1 -4 4 v6 l-7 -6 h-5 a4 4 0 0 1 -4 -4 V32 a4 4 0 0 1 4 -4Z" fill="url(#scL)"/></svg></span>
+        <div class="stepc__title">피드백</div>
+        <div class="stepc__sub">보완 방향·학습 전략 제시</div>
+        <ul class="stepc__list"><li>개별 피드백 리포트</li><li>다음 학습 전략 설계</li></ul>
       </div>
     </div>
   </div>

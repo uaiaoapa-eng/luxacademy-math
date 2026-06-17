@@ -371,6 +371,31 @@ body.home .stat { flex-direction: row; gap: 10px; }
 .teacher__for { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--paper-line); font-size: 14px; }
 .teacher__for b { color: var(--gold-ink); }
 
+/* STEP 카드 (커리큘럼·시스템 공통 — 3D 아이콘 레퍼런스 스타일) */
+.stepc-grid { display: grid; gap: 20px; }
+.stepc-grid--4 { grid-template-columns: repeat(4, 1fr); }
+.stepc-grid--5 { grid-template-columns: repeat(5, 1fr); }
+.stepc {
+  position: relative; background: #fff; border: 1px solid var(--paper-line);
+  border-radius: 18px; padding: 22px 20px 24px; box-shadow: 0 10px 26px rgba(20,40,80,.07);
+}
+.stepc__badge {
+  display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .05em;
+  color: #fff; background: #1b2a44; border-radius: 8px; padding: 5px 10px;
+}
+.stepc__icon { display: grid; place-items: center; height: 90px; margin: 4px 0 2px; }
+.stepc__icon svg { width: 62px; height: 62px; filter: drop-shadow(0 8px 12px rgba(47,111,224,.22)); }
+.stepc__title { font-size: 18px; font-weight: 800; color: #101a2b; letter-spacing: -.01em; }
+.stepc__sub { margin-top: 4px; font-size: 12.8px; font-weight: 700; color: var(--gold-ink); }
+.stepc__list { margin-top: 13px; display: flex; flex-direction: column; gap: 6px; }
+.stepc__list li { position: relative; padding-left: 12px; font-size: 12.5px; line-height: 1.42; color: var(--paper-mute); }
+.stepc__list li::before { content: "-"; position: absolute; left: 2px; }
+@media (max-width: 900px) {
+  .stepc-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+    gap: 14px; padding: 4px 0 10px; -webkit-overflow-scrolling: touch; }
+  .stepc { flex: 0 0 76%; scroll-snap-align: start; }
+}
+
 /* 로봇관 강사 카드 (현직 전문가 레퍼런스 스타일) */
 .rt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .rt-card {
