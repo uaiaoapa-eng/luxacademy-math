@@ -248,7 +248,13 @@ body.home .stat { flex-direction: row; gap: 10px; }
 .stat__body { display: flex; flex-direction: column; align-items: center; }
 
 /* 로봇관 실적현황 — 파동 배경 위 큰 숫자 (예시 스타일) */
-#results.robstats { background: #f3f8ff url("assets/robot-stats-bg.jpg") center center / cover no-repeat; }
+#results.robstats { position: relative; background: #fff; overflow: hidden; }
+#results.robstats::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 63%;
+  background: url("assets/robot-stats-bg.jpg") center top / cover no-repeat;
+  z-index: 0; pointer-events: none;
+}
+#results.robstats > .wrap { position: relative; z-index: 1; }
 #results.robstats .stats { gap: 8px; }
 #results.robstats .stat { background: transparent; border: none; box-shadow: none; padding: 18px 12px; }
 #results.robstats .num { font-size: clamp(40px, 6vw, 64px); color: #16233d; min-height: auto; }
