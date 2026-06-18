@@ -795,13 +795,30 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
     url("assets/sub-middle.jpg") right center / cover no-repeat, #dfeafb;
 }
 .subhero--high {
-  background: linear-gradient(90deg, rgba(228,231,250,0.82) 0%, rgba(228,231,250,0.2) 44%, rgba(228,231,250,0) 64%),
-    url("assets/sub-high.jpg") right center / cover no-repeat, #e4e7fa;
+  background: linear-gradient(90deg, rgba(14,22,52,0.86) 0%, rgba(14,22,52,0.5) 46%, rgba(14,22,52,0.12) 66%),
+    url("assets/sub-high.jpg") right center / cover no-repeat, #0e1634;
 }
+.subhero.subhero--high h1 { color: #fff; }
+.subhero.subhero--high h1 .em { color: #9cc4ff; }
+.subhero.subhero--high .subhero__cta { background: #fff; color: var(--gold-ink); border-color: #fff; }
+.subhero.subhero--high .subhero__cta:hover { background: #eef3fb; }
 .subhero--sat {
   background: linear-gradient(90deg, rgba(7,20,46,0.88) 0%, rgba(7,20,46,0.48) 46%, rgba(7,20,46,0.12) 66%),
     url("assets/sub-sat.jpg") right center / cover no-repeat, #0a1733;
 }
+/* 수능 4가지 조건 — TCMP 파스텔 카드 */
+.tcmp4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: start; }
+.tc4 { border-radius: 22px; padding: 30px 26px 36px; text-decoration: none; display: block; color: inherit; }
+.tc4--c, .tc4--p { margin-top: 52px; }
+.tc4--t { background: #fde6e6; } .tc4--t .tc4__k { color: #f4615f; }
+.tc4--c { background: #fcf3cc; } .tc4--c .tc4__k { color: #f3c218; }
+.tc4--m { background: #d4f2e1; } .tc4--m .tc4__k { color: #1eb573; }
+.tc4--p { background: #dce6fb; } .tc4--p .tc4__k { color: #3b54ee; }
+.tc4__k { display: block; font-size: 60px; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
+.tc4__lab { margin-top: 20px; font-size: 16.5px; font-weight: 800; color: #1b2330; letter-spacing: .02em; }
+.tc4__d { margin-top: 14px; font-size: 14px; line-height: 1.65; color: #46505f; }
+@media (max-width: 760px) { .tcmp4 { grid-template-columns: repeat(2, 1fr); } .tc4--c, .tc4--p { margin-top: 0; } }
+
 .subhero.subhero--sat h1 { color: #fff; }
 .subhero.subhero--sat h1 .em { color: #8fd0ff; }
 .subhero.subhero--sat .hero__eyebrow { color: rgba(255,255,255,0.82); }
