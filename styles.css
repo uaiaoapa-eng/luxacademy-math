@@ -385,6 +385,12 @@ body.home .stat { flex-direction: row; gap: 10px; }
 }
 .stepc__icon { display: grid; place-items: center; height: 90px; margin: 4px 0 2px; }
 .stepc__icon svg { width: 62px; height: 62px; filter: drop-shadow(0 8px 12px rgba(47,111,224,.22)); }
+.stepc__icon img { width: 78px; height: 78px; object-fit: contain; display: block; }
+
+/* 시스템 섹션 ↔ 후기 띠배너 사이 흰 여백 제거(바로 붙임) */
+#system { padding-bottom: 40px; }
+#stories { padding-top: 0; }
+#stories .review-band { margin-top: 0; }
 .stepc__title { font-size: 18px; font-weight: 800; color: #101a2b; letter-spacing: -.01em; }
 .stepc__sub { margin-top: 4px; font-size: 12.8px; font-weight: 700; color: var(--gold-ink); }
 .stepc__list { margin-top: 13px; display: flex; flex-direction: column; gap: 6px; }
