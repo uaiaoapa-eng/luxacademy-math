@@ -238,10 +238,10 @@ body.home .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
 }
 .stat .num {
   font-size: clamp(30px, 4vw, 42px); font-weight: 800; color: var(--gold-ink); line-height: 1.1; letter-spacing: -0.02em;
-  min-height: 48px; display: flex; align-items: center; justify-content: center;
+  min-height: 30px; display: flex; align-items: center; justify-content: center;
 }
 .stat .num .u { font-size: 0.5em; font-weight: 700; margin-left: 2px; }
-.stat .label { margin-top: 3px; font-size: 15px; color: var(--paper-mute); }
+.stat .label { margin-top: 0; font-size: 15px; color: var(--paper-mute); }
 .stat__laurel { width: 30px; height: 66px; flex: 0 0 auto; pointer-events: none; }
 .stat__laurel img { width: 100%; height: 100%; object-fit: contain; display: block; }
 body.home .stat { flex-direction: row; gap: 10px; }
@@ -821,8 +821,8 @@ body.home .stat { flex-direction: row; gap: 10px; }
   .gnb__burger { display: block; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 9px; }
   .stat { padding: 16px 10px; }
-  .stat .num { min-height: 40px; }
-  .stat .label { margin-top: 2px; font-size: 13.5px; }
+  .stat .num { min-height: 28px; }
+  .stat .label { margin-top: 0; font-size: 13.5px; }
   .record-band a { padding: 18px 18px; }
   .record-band .eye { font-size: 11.5px; margin-bottom: 7px; }
   .record-band .line { font-size: 13px; line-height: 1.6; }
