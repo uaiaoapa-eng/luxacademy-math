@@ -499,9 +499,10 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
 .kdt-hero__title b { color: #ffd34d; font-weight: 700; }
 
 /* 파트너사 로고 행 */
-.logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 26px 48px; }
-.logos img { height: 46px; width: auto; object-fit: contain; }
-@media (max-width: 600px) { .logos { gap: 22px 30px; } .logos img { height: 36px; } }
+.logos { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: clamp(10px, 2vw, 30px); }
+.logos img { height: 42px; width: auto; object-fit: contain; flex: 0 0 auto; }
+.logos img[alt="NASA"] { height: 62px; }
+@media (max-width: 760px) { .logos { flex-wrap: wrap; gap: 20px 28px; } .logos img { height: 36px; } .logos img[alt="NASA"] { height: 50px; } }
 
 /* 핵심가치 카드 (교육과정 레퍼런스 스타일) */
 .cv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
