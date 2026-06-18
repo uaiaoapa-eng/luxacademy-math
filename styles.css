@@ -664,16 +664,13 @@ body.home .stat { flex-direction: row; gap: 10px; }
 /* =========================================================
    COM-01  Footer (라이트)
    ========================================================= */
-.footer { background: var(--paper-soft); color: var(--paper-mute); padding: 56px 0 40px; border-top: 1px solid var(--paper-line); }
+.footer { background: #3F475B; color: #fff; padding: 56px 0 40px; border-top: none; }
 .footer__top { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; align-items: flex-start; }
-.footer__brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--paper-ink); }
-.footer__sns { display: flex; gap: 10px; }
-.footer__sns a { width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--paper-line); background: #fff; display: grid; place-items: center; color: var(--paper-mute); transition: 0.2s; font-size: 13px; font-weight: 700; }
-.footer__sns a:hover { border-color: var(--gold-line); color: var(--gold-ink); }
-.footer__biz { margin-top: 30px; font-size: 13.5px; line-height: 1.9; color: var(--paper-mute); }
-.footer__biz a { color: var(--paper-ink); }
-.footer__biz a:hover { color: var(--gold-ink); }
-.footer__biz .sep { color: var(--paper-line); margin: 0 8px; }
+.footer__brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; }
+.footer__biz { margin-top: 30px; font-size: 13.5px; line-height: 1.9; color: #fff; }
+.footer__biz a { color: #fff; }
+.footer__biz a:hover { color: #fff; text-decoration: underline; }
+.footer__biz .sep { color: rgba(255,255,255,0.4); margin: 0 8px; }
 
 /* =========================================================
    모바일 하단 고정 CTA 바 (라이트)
