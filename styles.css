@@ -290,6 +290,10 @@ body.home .stat { flex-direction: row; gap: 10px; }
 .grade:hover .grade__icon svg { transform: translateY(-4px) scale(1.05); }
 .grade__range { font-size: 22px; font-weight: 800; color: var(--gold-ink); }
 .grade__quote { margin-top: 16px; font-size: 17px; font-weight: 700; line-height: 1.5; color: var(--paper-ink); }
+/* 로봇관 '우리가 잘하는 이유' — 라인 아이콘 + 줄글 가볍게 */
+body.robot-page .grade__icon { width: auto; height: auto; margin-bottom: 14px; }
+body.robot-page .grade__icon svg { width: 50px; height: 50px; filter: none; }
+body.robot-page .grade__quote { margin-top: 12px; font-size: 14px; font-weight: 400; line-height: 1.6; color: var(--paper-mute); }
 .grade__points { margin-top: 18px; display: flex; flex-direction: column; gap: 9px; }
 .grade__points li { position: relative; padding-left: 22px; font-size: 14.5px; color: var(--paper-mute); }
 .grade__points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
