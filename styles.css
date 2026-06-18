@@ -486,8 +486,19 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
   background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.38);
   padding: 8px 16px; border-radius: 999px;
 }
-.kdt-hero__title { margin-top: 22px; font-size: clamp(30px, 5vw, 50px); font-weight: 800; line-height: 1.26; letter-spacing: -0.025em; }
-.kdt-hero__title b { color: #ffd34d; }
+.kdt-hero__title { margin-top: 22px; font-size: clamp(30px, 5vw, 50px); font-weight: 700; line-height: 1.26; letter-spacing: -0.025em; }
+.kdt-hero__title b { color: #ffd34d; font-weight: 700; }
+
+/* 핵심가치 카드 (교육과정 레퍼런스 스타일) */
+.cv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.cv-card { position: relative; background: #f3f5f9; border-radius: 16px; padding: 30px 30px 28px 34px; overflow: hidden; }
+.cv-card::before { content: ""; position: absolute; left: 0; top: 28px; width: 6px; height: 96px; background: var(--gold); border-radius: 0 5px 5px 0; }
+.cv-card__ic { width: 86px; height: 86px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(20,40,80,.05); color: #20283a; }
+.cv-card__ic svg { width: 42px; height: 42px; }
+.cv-card__t { margin-top: 22px; font-size: 19px; font-weight: 800; color: #161f33; padding-bottom: 16px; border-bottom: 1px solid #e1e6ee; }
+.cv-card__d { margin-top: 16px; font-size: 14px; line-height: 1.6; color: #6b7787; }
+@media (max-width: 900px) { .cv-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cv-grid { grid-template-columns: 1fr; } }
 .kdt-hero__sub { margin-top: 18px; font-size: clamp(16px, 1.9vw, 19px); color: rgba(255, 255, 255, 0.9); line-height: 1.7; }
 .kdt-hero__cta { margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .kdt-hero .btn--outline { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
