@@ -786,6 +786,25 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
     #dfeafb;
 }
 .subhero--pastel .wrap { position: relative; z-index: 1; }
+
+/* 수학관 서브 배너 (이미지 배경) */
+.subhero--img { position: relative; overflow: hidden; isolation: isolate; border-bottom: none; }
+.subhero--img .wrap { position: relative; z-index: 1; }
+.subhero--middle {
+  background: linear-gradient(90deg, rgba(225,232,250,0.82) 0%, rgba(225,232,250,0.2) 44%, rgba(225,232,250,0) 64%),
+    url("assets/sub-middle.jpg") right center / cover no-repeat, #dfeafb;
+}
+.subhero--high {
+  background: linear-gradient(90deg, rgba(228,231,250,0.82) 0%, rgba(228,231,250,0.2) 44%, rgba(228,231,250,0) 64%),
+    url("assets/sub-high.jpg") right center / cover no-repeat, #e4e7fa;
+}
+.subhero--sat {
+  background: linear-gradient(90deg, rgba(7,20,46,0.88) 0%, rgba(7,20,46,0.48) 46%, rgba(7,20,46,0.12) 66%),
+    url("assets/sub-sat.jpg") right center / cover no-repeat, #0a1733;
+}
+.subhero.subhero--sat h1 { color: #fff; }
+.subhero.subhero--sat h1 .em { color: #8fd0ff; }
+.subhero.subhero--sat .hero__eyebrow { color: rgba(255,255,255,0.82); }
 .subhero__crumb { font-size: 13px; color: var(--paper-mute); margin-bottom: 16px; }
 .subhero__crumb a { color: var(--paper-mute); }
 .subhero__crumb a:hover { color: var(--gold-ink); }
