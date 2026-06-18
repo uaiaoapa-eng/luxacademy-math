@@ -118,27 +118,27 @@ section { scroll-margin-top: var(--gnb-h); }
 .gnb--solid { background: rgba(255, 255, 255, 0.95); box-shadow: 0 6px 24px rgba(23, 34, 57, 0.06); }
 
 /* index banner: transparent header overlapping hero, white text */
-body.home .gnb { transition: background 0.3s, box-shadow 0.3s, border-color 0.3s; }
-body.home .gnb:not(.gnb--solid) {
+body.home .gnb , body.robot-page .gnb { transition: background 0.3s, box-shadow 0.3s, border-color 0.3s; }
+body.home .gnb:not(.gnb--solid) , body.robot-page .gnb:not(.gnb--solid) {
   background: transparent; border-bottom-color: transparent; box-shadow: none;
 }
-body.home .gnb:not(.gnb--solid) .gnb__logo--white { display: block; }
-body.home .gnb:not(.gnb--solid) .gnb__logo--navy { display: none; }
-body.home .gnb:not(.gnb--solid) .gnb__logo,
-body.home .gnb:not(.gnb--solid) .gnb__menu a,
-body.home .gnb:not(.gnb--solid) .gnb__menu .has-drop > span,
-body.home .gnb:not(.gnb--solid) .gnb__tel { color: #fff; }
-body.home .gnb:not(.gnb--solid) .gnb__menu a:hover,
-body.home .gnb:not(.gnb--solid) .gnb__menu .has-drop:hover > span,
-body.home .gnb:not(.gnb--solid) .gnb__tel:hover { color: #fff; opacity: 0.78; }
-body.home .gnb:not(.gnb--solid) .gnb__kakao {
+body.home .gnb:not(.gnb--solid) .gnb__logo--white , body.robot-page .gnb:not(.gnb--solid) .gnb__logo--white { display: block; }
+body.home .gnb:not(.gnb--solid) .gnb__logo--navy , body.robot-page .gnb:not(.gnb--solid) .gnb__logo--navy { display: none; }
+body.home .gnb:not(.gnb--solid) .gnb__logo, body.robot-page .gnb:not(.gnb--solid) .gnb__logo,
+body.home .gnb:not(.gnb--solid) .gnb__menu a, body.robot-page .gnb:not(.gnb--solid) .gnb__menu a,
+body.home .gnb:not(.gnb--solid) .gnb__menu .has-drop > span, body.robot-page .gnb:not(.gnb--solid) .gnb__menu .has-drop > span,
+body.home .gnb:not(.gnb--solid) .gnb__tel , body.robot-page .gnb:not(.gnb--solid) .gnb__tel { color: #fff; }
+body.home .gnb:not(.gnb--solid) .gnb__menu a:hover, body.robot-page .gnb:not(.gnb--solid) .gnb__menu a:hover,
+body.home .gnb:not(.gnb--solid) .gnb__menu .has-drop:hover > span, body.robot-page .gnb:not(.gnb--solid) .gnb__menu .has-drop:hover > span,
+body.home .gnb:not(.gnb--solid) .gnb__tel:hover , body.robot-page .gnb:not(.gnb--solid) .gnb__tel:hover { color: #fff; opacity: 0.78; }
+body.home .gnb:not(.gnb--solid) .gnb__kakao , body.robot-page .gnb:not(.gnb--solid) .gnb__kakao {
   color: #fff; background: rgba(255, 255, 255, 0.14); border-color: rgba(255, 255, 255, 0.45);
 }
-body.home .gnb:not(.gnb--solid) .gnb__kakao:hover { background: rgba(255, 255, 255, 0.24); }
-body.home .gnb:not(.gnb--solid) .gnb__burger span { background: #fff; }
+body.home .gnb:not(.gnb--solid) .gnb__kakao:hover , body.robot-page .gnb:not(.gnb--solid) .gnb__kakao:hover { background: rgba(255, 255, 255, 0.24); }
+body.home .gnb:not(.gnb--solid) .gnb__burger span , body.robot-page .gnb:not(.gnb--solid) .gnb__burger span { background: #fff; }
 /* 드롭다운 내부 링크는 흰 박스 위라 항상 진한 색 유지 */
-body.home .gnb:not(.gnb--solid) .gnb__drop a { color: var(--paper-mute); }
-body.home .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
+body.home .gnb:not(.gnb--solid) .gnb__drop a , body.robot-page .gnb:not(.gnb--solid) .gnb__drop a { color: var(--paper-mute); }
+body.home .gnb:not(.gnb--solid) .gnb__drop a:hover , body.robot-page .gnb:not(.gnb--solid) .gnb__drop a:hover { color: var(--gold-ink); }
 .footer__logo-img { height: 32px; width: auto; display: block; }
 
 .gnb__menu { display: flex; align-items: center; gap: 4px; margin-left: 8px; }
@@ -472,13 +472,13 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
 .kdt-hero {
   position: relative; overflow: hidden; isolation: isolate; color: #fff; text-align: center;
   padding: calc(var(--gnb-h) + 70px) 0 70px;
-  background: linear-gradient(135deg, #1733b8 0%, #3a5cf0 46%, #7b3ff2 100%);
+  background: #07142e url("assets/robot-hero.jpg") center center / cover no-repeat;
 }
 .kdt-hero__bg {
   position: absolute; inset: 0; z-index: -1;
   background:
-    radial-gradient(900px 520px at 82% 8%, rgba(255, 255, 255, 0.20), transparent 60%),
-    radial-gradient(760px 520px at 8% 96%, rgba(120, 200, 255, 0.28), transparent 60%);
+    radial-gradient(820px 480px at 50% 44%, rgba(4, 12, 30, 0.55), transparent 72%),
+    linear-gradient(180deg, rgba(4, 12, 30, 0.28), rgba(4, 12, 30, 0.34));
 }
 .kdt-hero__inner { position: relative; z-index: 1; max-width: 900px; }
 .kdt-hero__badge {
