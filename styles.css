@@ -1054,3 +1054,13 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
   .poster-info dl { grid-template-columns: 1fr; gap: 4px 0; }
   .poster-info dd { margin-bottom: 10px; }
 }
+
+/* =========================================================
+   네비 전환 (파일 맨 끝 = 우선순위 보장)
+   메뉴+연락처+CTA가 한 줄에 안 들어가는 폭(~1024px)부터 햄버거로 전환해
+   메뉴 글자가 세로로 깨지는 현상 방지. 드로어(.mo-menu)는 JS로 폭과 무관하게 열림.
+   ========================================================= */
+@media (max-width: 1024px) {
+  .gnb__menu, .gnb__contact, .gnb__cta { display: none; }
+  .gnb__burger { display: block; margin-left: auto; }
+}
