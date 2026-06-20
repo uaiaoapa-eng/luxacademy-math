@@ -1024,7 +1024,8 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
 }
 .float-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(23, 34, 57, 0.28); }
 .float-btn .ic { font-size: 18px; line-height: 1; }
-.float-kakao { background: var(--gold); color: #ffffff; }
+.float-kakao { background: #FEE500; color: #3C1E1E; }
+.float-kakao .ic { color: #3C1E1E; }
 .float-tel { background: var(--navy-800); color: #fff; }
 
 @media (max-width: 768px) {
