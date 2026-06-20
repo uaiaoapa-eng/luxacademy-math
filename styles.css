@@ -846,6 +846,13 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
 .cta-banner .btn { margin-top: 26px; }
 .cta-banner .btn--gold { box-shadow: 0 10px 30px rgba(43,138,239,0.4); }
 
+/* 강사 선발 검증 (퍼널) */
+.verify { background: radial-gradient(900px 520px at 82% -10%, #271c43 0%, #140f22 60%); color: #fff; }
+.verify__eyebrow { display: inline-block; font-size: 15px; font-weight: 700; color: #b9a4f5; border-left: 4px solid #8b6ff0; padding-left: 12px; line-height: 1.2; }
+.verify__title { margin-top: 18px; font-size: clamp(26px, 4vw, 44px); font-weight: 800; line-height: 1.28; letter-spacing: -.01em; }
+.verify__card { margin-top: 36px; background: #1b1530; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 30px clamp(16px,3vw,40px); }
+.verify__card svg { width: 100%; height: auto; display: block; }
+
 /* 로드맵 표 */
 .roadmap { max-width: 920px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--paper-line); box-shadow: var(--card); background: #fff; }
 .roadmap table { width: 100%; border-collapse: collapse; }
