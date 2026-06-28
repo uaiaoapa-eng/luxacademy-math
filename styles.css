@@ -463,7 +463,7 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
 .rb__main small { font-size: 14.5px; font-weight: 700; color: #e7d49a; }
 .rb__main sup { font-size: .6em; }
 .proof-note { margin-top: 12px; text-align: right; font-size: 11.5px; color: #8b97ad; }
-.proof-tess { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 6px; }
+.proof-tess { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 26px; }
 .tcard { background: linear-gradient(160deg, #3f69de 0%, #2f55cf 100%); border-radius: 18px; padding: 26px 28px; color: #fff; box-shadow: 0 12px 30px rgba(47,85,207,.22); }
 .tcard__t { font-size: 24px; font-weight: 800; color: #ffe79e; }
 .tcard__b { margin-top: 14px; font-size: 14px; line-height: 1.72; color: rgba(255,255,255,.92); }
