@@ -546,7 +546,7 @@ a.rt-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(20,4
 .empty-state__text { margin-top: 18px; font-size: 16px; color: var(--paper-mute); }
 
 /* 갤러리 (코딩관) */
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
 .gallery-item {
   display: block; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--paper-line); box-shadow: var(--card); background: #eef2f8;
