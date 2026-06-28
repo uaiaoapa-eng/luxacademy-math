@@ -250,7 +250,7 @@ body.home .stat { flex-direction: row; gap: 10px; }
 /* 로봇관 실적현황 — 파동 배경 위 큰 숫자 (예시 스타일) */
 #results.robstats { position: relative; background: #fff; overflow: hidden; }
 #results.robstats::before {
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 63%;
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 58%;
   background: url("assets/robot-stats-bg.jpg") center top / cover no-repeat;
   z-index: 0; pointer-events: none;
 }
